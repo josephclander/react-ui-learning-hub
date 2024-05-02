@@ -16,10 +16,16 @@ const Solution01: React.FC = () => {
     <div className={styles.container}>
       <div className={styles.counter}>{counter}</div>
       <div className={styles.buttons__container}>
-        <button className={styles.plus} onClick={handleIncrement}>
+        <button
+          className={`${styles.plus} ${styles.button}`}
+          onClick={handleIncrement}
+        >
           +
         </button>
-        <button className={styles.minus} onClick={handleDecrement}>
+        <button
+          className={`${styles.minus} ${styles.button}`}
+          onClick={handleDecrement}
+        >
           -
         </button>
       </div>
