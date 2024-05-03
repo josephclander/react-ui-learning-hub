@@ -4,8 +4,8 @@ const Solution11 = () => {
   const [pwd, setPwd] = useState("");
   const [visible, toggleVisible] = useState(false);
 
-  const handleVisibility = (): void => {
-    toggleVisible((prev) => !prev);
+  const toggleVisibility = (): void => {
+    toggleVisible((prevVisible) => !prevVisible);
   };
 
   const handleInput = (event: React.ChangeEvent<HTMLInputElement>): void => {
@@ -17,15 +17,15 @@ const Solution11 = () => {
       <label htmlFor="password">Enter Password</label>
       <br />
       <input
-        onChange={(event) => handleInput(event)}
+        onChange={handleInput}
         value={pwd}
-        type="password"
+        type={visible ? "text" : "password"}
         id="password"
-      />
-      <button onClick={handleVisibility}>
-        {visible ? "Hide Password" : "View Password"}
+        name="pwd"
+      />{" "}
+      <button onClick={toggleVisibility}>
+        {visible ? "Hide Password" : "Show Password"}
       </button>
-      {visible && <p>{pwd}</p>}
       <br />
       <br />
     </div>
