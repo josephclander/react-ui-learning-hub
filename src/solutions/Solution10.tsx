@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 
+// types
 type userProps = {
   gender: string;
   name: {
@@ -12,7 +13,48 @@ type userProps = {
 
 type allUserProps = userProps[];
 
+type APIResponse = {
+  results: userProps[];
+};
+
+// function
 const Solution10: React.FC = () => {
+  const { users, isLoading, error } = useFetchUsers();
+
+  return (
+    <div>
+      <h2>Data</h2>
+      {isLoading && <p>Loading...</p>}
+      {error && <p>Error: {error}</p>}
+
+      {users && users.map((user) => <User key={user.email} {...user} />)}
+    </div>
+  );
+};
+
+export default Solution10;
+
+// display user
+function User(user: userProps) {
+  return (
+    <div>
+      {user?.name?.title} {user?.name?.first} {user?.name?.last}
+    </div>
+  );
+}
+
+// fetch data
+const fetchUserData = async (): Promise<allUserProps> => {
+  const response = await fetch("https://randomuser.me/api?results=5&nat=gb");
+
+  if (!response.ok) throw Error("Error fetching data");
+
+  const data: APIResponse = await response.json();
+  return data.results;
+};
+
+// custom hook
+function useFetchUsers() {
   const [users, setUsers] = useState<allUserProps>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -20,16 +62,10 @@ const Solution10: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(
-          "https://randomuser.me/api?results=5&nat=gb"
-        );
-
-        if (!response.ok) throw Error("Error fetching data");
-
-        const data = await response.json();
+        const results = await fetchUserData();
         // data.results = [];
-        if (data.results.length > 0) {
-          setUsers(data.results);
+        if (results.length > 0) {
+          setUsers(results);
           setError(null);
         } else {
           throw Error("No results found.");
@@ -44,24 +80,5 @@ const Solution10: React.FC = () => {
     };
     fetchData();
   }, []);
-  return (
-    <div>
-      <h2>Data</h2>
-      {isLoading ? (
-        <p>Loading...</p>
-      ) : error ? (
-        <p>Error: {error}</p>
-      ) : (
-        users.map((user) => {
-          return (
-            <div key={user?.email}>
-              {user?.name?.title} {user?.name?.first} {user?.name?.last}
-            </div>
-          );
-        })
-      )}
-    </div>
-  );
-};
-
-export default Solution10;
+  return { users, isLoading, error };
+}
