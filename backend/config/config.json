@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "josephlander",
+    "password": null,
+    "database": "rmc_db",
+    "host": "localhost",
+    "dialect": "postgres",
+    "port": 5432
+  },
+  "test": {
+    "username": "josephlander",
+    "password": null,
+    "database": "rmc_db_test",
+    "host": "localhost",
+    "dialect": "postgres",
+    "port": 5432
+  },
+  "production": {
+    "username": "josephlander",
+    "password": null,
+    "database": "rmc_db_production",
+    "host": "localhost",
+    "dialect": "postgres",
+    "port": 5432
+  }
+}
