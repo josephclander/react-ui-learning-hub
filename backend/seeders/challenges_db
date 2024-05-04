@@ -1,0 +1,30 @@
+1,Counter Component,Create a component that shows a number (starts from 0). Add two buttons to increment and decrement the counter.,0,2024-05-04 17:40:58.356+01,2024-05-04 17:40:58.356+01
+2,Todo List,Develop a simple todo list where users can add items to a list using a text input and a button. Items should also be removable.,0,2024-05-04 17:40:58.356+01,2024-05-04 17:40:58.356+01
+3,Currency Converter,Build a small interface to convert amounts from one currency to another using static exchange rates.,0,2024-05-04 17:40:58.356+01,2024-05-04 17:40:58.356+01
+4,Weather Display Widget,"Create a component that displays the weather (e.g., sunny, rainy) based on a predefined location. Allow users to change the location from a dropdown.",0,2024-05-04 17:40:58.356+01,2024-05-04 17:40:58.356+01
+5,Timer Component,"Develop a timer where users can start, stop, and reset. Display the time in a digital format.",0,2024-05-04 17:40:58.356+01,2024-05-04 17:40:58.356+01
+6,Modal Component,Implement a modal window that opens with a button click and can be closed with a close button or by clicking outside the modal.,0,2024-05-04 17:40:58.356+01,2024-05-04 17:40:58.356+01
+7,Tab Selector,Create a component with multiple tabs for users to click through. Display different content as each tab is selected.,0,2024-05-04 17:40:58.356+01,2024-05-04 17:40:58.356+01
+8,Accordion Component,Build an accordion/dropdown where sections expand or collapse when their headers are clicked.,0,2024-05-04 17:40:58.356+01,2024-05-04 17:40:58.356+01
+9,Carousel Component,Implement a basic image carousel with 'next' and 'previous' buttons to cycle through images.,0,2024-05-04 17:40:58.356+01,2024-05-04 17:40:58.356+01
+10,Data Fetch and Display,Make a component that fetches data from a public API and displays it in a list or table format.,0,2024-05-04 17:40:58.356+01,2024-05-04 17:40:58.356+01
+11,Password Visibility Toggle,Create a password input field with a toggle button that shows or hides the password.,0,2024-05-04 17:40:58.356+01,2024-05-04 17:40:58.356+01
+12,Star Rating Component,Develop a star rating component where users can set a rating by clicking on stars.,0,2024-05-04 17:40:58.356+01,2024-05-04 17:40:58.356+01
+13,Pagination Component,Build a component that shows numbered pages and allows users to click through pages of data (data can be static).,0,2024-05-04 17:40:58.356+01,2024-05-04 17:40:58.356+01
+14,Simple Blog Post Editor,"Create a text input area where users can enter a title and content for a blog post, and submit it with a button.",0,2024-05-04 17:40:58.356+01,2024-05-04 17:40:58.356+01
+15,Search Filter for List,Develop a component that filters items in a list based on a text input search query.,0,2024-05-04 17:40:58.356+01,2024-05-04 17:40:58.356+01
+16,Image Zoom Viewer,Create a component that allows users to hover over an image to view a magnified version of the part their cursor is over.,0,2024-05-04 17:40:58.356+01,2024-05-04 17:40:58.356+01
+17,Dynamic Form Builder,Build a form where users can dynamically add or remove input fields (like text boxes or dropdowns).,0,2024-05-04 17:40:58.356+01,2024-05-04 17:40:58.356+01
+18,Progress Bar,Implement a progress bar that updates based on a value input by the user.,0,2024-05-04 17:40:58.356+01,2024-05-04 17:40:58.356+01
+19,Clipboard Copy Component,Create a component with a text box and a button that copies the text in the box to the clipboard when clicked.,0,2024-05-04 17:40:58.356+01,2024-05-04 17:40:58.356+01
+20,Autocomplete Text Input,"Develop a text input that suggests possible completions as the user types, pulling from a predefined list of options.",0,2024-05-04 17:40:58.356+01,2024-05-04 17:40:58.356+01
+21,Theme Switcher,Build a toggle that switches the color scheme of the page between light and dark modes.,0,2024-05-04 17:40:58.356+01,2024-05-04 17:40:58.356+01
+22,Drag and Drop Interface,Implement a basic drag and drop interface where users can move items between different containers.,0,2024-05-04 17:40:58.356+01,2024-05-04 17:40:58.356+01
+24,Calendar Picker,Create a date picker that users can use to select a date from a simple calendar view.,0,2024-05-04 17:40:58.356+01,2024-05-04 17:40:58.356+01
+25,Notification Bell,Implement a bell icon that shows a red notification badge; clicking on the bell shows a dropdown with messages.,0,2024-05-04 17:40:58.356+01,2024-05-04 17:40:58.356+01
+26,Collapsible Side Menu,Build a side menu that can be toggled to expand or collapse when clicking a menu icon.,0,2024-05-04 17:40:58.356+01,2024-05-04 17:40:58.356+01
+27,Multi-Select Dropdown,Create a dropdown where users can select multiple options either by clicking or typing.,0,2024-05-04 17:40:58.356+01,2024-05-04 17:40:58.356+01
+28,Tooltips on Hover,"Implement tooltips that appear when hovering over different elements, providing additional information.",0,2024-05-04 17:40:58.356+01,2024-05-04 17:40:58.356+01
+29,Chat Bubble UI,Build a chat bubble interface where messages can be typed into a text box and submitted to appear as chat bubbles.,0,2024-05-04 17:40:58.356+01,2024-05-04 17:40:58.356+01
+30,Range Slider,Develop a range slider component for selecting a value within a specified range.,0,2024-05-04 17:40:58.356+01,2024-05-04 17:40:58.356+01
+31,Countdown Timer,"Create a countdown timer where users can set a duration, and it counts down to zero with updates displayed visually.",0,2024-05-04 17:40:58.356+01,2024-05-04 17:40:58.356+01

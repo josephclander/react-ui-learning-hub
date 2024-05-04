@@ -17,6 +17,19 @@ module.exports = {
         type: Sequelize.TEXT,
         allowNull: false,
       },
+      attempts: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        defaultValue: 0,
+      },
+      createdAt: {
+        type: Sequelize.DATE,
+        allowNull: false,
+      },
+      updatedAt: {
+        type: Sequelize.DATE,
+        allowNull: false,
+      },
     });
   },
 

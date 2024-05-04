@@ -6,7 +6,7 @@ class Challenge extends Model {}
 Challenge.init(
   {
     id: {
-      type: DataTypes.INTEGER.UNSIGNED,
+      type: DataTypes.INTEGER,
       autoIncrement: true,
       primaryKey: true,
     },
@@ -18,11 +18,17 @@ Challenge.init(
       type: DataTypes.TEXT,
       allowNull: false,
     },
+    attempts: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 0,
+    },
   },
   {
-    sequelize, // passing the `sequelize` instance is necessary
-    modelName: "Challenge", // Specify model name
+    sequelize,
+    modelName: "Challenge",
     tableName: "challenges",
+    timestamps: true,
   }
 );
 
