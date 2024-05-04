@@ -33,31 +33,49 @@ app.get("/challenge/:id", async (req, res) => {
 // update challenge attempts by one
 app.put("/challenge/:id/increment", async (req, res) => {
   const challengeId = parseInt(req.params.id);
-  const response = await Challenge.increment(
-    { attempts: 1 },
-    {
-      where: {
-        id: challengeId,
-      },
+
+  try {
+    const response = await Challenge.increment(
+      { attempts: 1 },
+      {
+        where: {
+          id: challengeId,
+        },
+      }
+    );
+    const challenge = response[0][0][0];
+    if (!challenge || challenge.length === 0) {
+      return res.status(404).send("That challenge cannot be found");
     }
-  );
-  const challenge = response[0][0][0];
-  res.send(challenge);
+    res.send(challenge);
+  } catch (error) {
+    console.error("Error incrementing challenge:", error);
+    res.status(500).send("An error occurend while incrementing the challenge");
+  }
 });
 
 // decrease challenge attempts by one
 app.put("/challenge/:id/decrement", async (req, res) => {
   const challengeId = parseInt(req.params.id);
-  const response = await Challenge.decrement(
-    { attempts: 1 },
-    {
-      where: {
-        id: challengeId,
-      },
+
+  try {
+    const response = await Challenge.decrement(
+      { attempts: 1 },
+      {
+        where: {
+          id: challengeId,
+        },
+      }
+    );
+    const challenge = response[0][0][0];
+    if (!challenge || challenge.length === 0) {
+      return res.status(404).send("That challenge cannot be found");
     }
-  );
-  const challenge = response[0][0][0];
-  res.send(challenge);
+    res.send(challenge);
+  } catch (error) {
+    console.error("Error decrementing challenge:", error);
+    res.status(500).send("An error occurend while decrementing the challenge");
+  }
 });
 
 app.listen(PORT, () => {
