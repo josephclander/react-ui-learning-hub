@@ -15,8 +15,19 @@ const PORT = process.env.PORT || 3001;
 // get challenge
 app.get("/challenge/:id", async (req, res) => {
   const challengeId = parseInt(req.params.id);
-  const challenge = await Challenge.findByPk(challengeId);
-  res.send(challenge);
+
+  try {
+    const challenge = await Challenge.findByPk(challengeId);
+    if (!challenge) {
+      // Use return here to stop further execution and send a response
+      return res.status(404).send("That challenge cannot be found");
+    }
+    res.send(challenge);
+  } catch (error) {
+    // Handle unexpected errors, such as database issues
+    console.error("Error fetching challenge:", error);
+    res.status(500).send("An error occurred while fetching the challenge");
+  }
 });
 
 // update challenge attempts by one
