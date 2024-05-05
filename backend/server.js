@@ -12,8 +12,22 @@ sequelize
 
 const PORT = process.env.PORT || 3001;
 
+app.get("/challenges", async (req, res) => {
+  try {
+    const challenges = await Challenge.findAll({ order: [["id", "ASC"]] });
+    if (!challenges || challenges.length === 0) {
+      return res.status(404).send("No challenges found");
+    }
+    console.log(challenges);
+    res.send(challenges);
+  } catch (error) {
+    console.error("Error fetching challenges");
+    res.status(500).send("An error occured while fetching the challenges");
+  }
+});
+
 // get challenge
-app.get("/challenge/:id", async (req, res) => {
+app.get("/challenges/:id", async (req, res) => {
   const challengeId = parseInt(req.params.id);
 
   try {
@@ -31,7 +45,7 @@ app.get("/challenge/:id", async (req, res) => {
 });
 
 // update challenge attempts by one
-app.put("/challenge/:id/increment", async (req, res) => {
+app.put("/challenges/:id/increment", async (req, res) => {
   const challengeId = parseInt(req.params.id);
 
   try {
@@ -55,7 +69,7 @@ app.put("/challenge/:id/increment", async (req, res) => {
 });
 
 // decrease challenge attempts by one
-app.put("/challenge/:id/decrement", async (req, res) => {
+app.put("/challenges/:id/decrement", async (req, res) => {
   const challengeId = parseInt(req.params.id);
 
   try {
