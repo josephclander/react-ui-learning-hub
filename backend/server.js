@@ -1,9 +1,11 @@
 const express = require("express");
 const sequelize = require("./models/index");
 const Challenge = require("./models/Challenge");
+const cors = require("cors");
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 sequelize
   .sync()
