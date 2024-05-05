@@ -7,6 +7,8 @@ import Layout from "./components/Layout";
 import Challenge from "./routes/Challenge";
 import NotFound from "./routes/NotFound";
 
+import { challengesLoader } from "./loaders/challengesLoader";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -15,6 +17,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Root />,
+        loader: challengesLoader,
       },
       {
         path: "/challenge/:id",

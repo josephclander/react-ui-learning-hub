@@ -1,5 +1,5 @@
+import { useLoaderData } from "react-router-dom";
 import styles from "./Root.module.css";
-import { useState, useEffect } from "react";
 import ChallengeItem from "../components/ChallengeItem";
 
 export interface ChallengeProps {
@@ -9,22 +9,7 @@ export interface ChallengeProps {
 }
 
 function Root() {
-  const [challenges, setChallenges] = useState<ChallengeProps[]>([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("http://localhost:3001/challenges");
-        const data = await response.json();
-        setChallenges(data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    fetchData();
-  }, [challenges]);
-
+  const { challenges } = useLoaderData() as { challenges: ChallengeProps[] };
   return (
     <div className={styles.Root__container}>
       <p className={styles.Root__blurb}>
@@ -33,10 +18,8 @@ function Root() {
       </p>
       <ul className={styles.Root__list}>
         {challenges &&
-          challenges.map((challenge) => {
-            return (
-              <ChallengeItem key={challenge.id} {...challenge} />
-            );
+          challenges.map((challenge: ChallengeProps) => {
+            return <ChallengeItem key={challenge.id} {...challenge} />;
           })}
       </ul>
     </div>
