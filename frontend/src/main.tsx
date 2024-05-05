@@ -8,6 +8,7 @@ import Challenge from "./routes/Challenge";
 import NotFound from "./routes/NotFound";
 
 import { challengesLoader } from "./loaders/challengesLoader";
+import { challengeByIdLoader } from "./loaders/challengeByIdLoader";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,12 @@ const router = createBrowserRouter([
       {
         path: "/challenge/:id",
         element: <Challenge />,
+        loader: ({ params }) => {
+          if (params.id === undefined) {
+            throw new Error("Challenge ID is missing");
+          }
+          return challengeByIdLoader(params.id);
+        },
       },
       {
         path: "*",
