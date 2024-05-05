@@ -1,8 +1,30 @@
-import { Link } from "react-router-dom";
-import challenges from "../assets/challenges.json";
 import styles from "./Root.module.css";
+import { useState, useEffect } from "react";
+import ChallengeItem from "../components/ChallengeItem";
+
+export interface ChallengeProps {
+  id: number;
+  title: string;
+  details: string;
+}
 
 function Root() {
+  const [challenges, setChallenges] = useState<ChallengeProps[]>([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("http://localhost:3001/challenges");
+        const data = await response.json();
+        setChallenges(data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchData();
+  }, [challenges]);
+
   return (
     <div className={styles.Root__container}>
       <p className={styles.Root__blurb}>
@@ -13,11 +35,7 @@ function Root() {
         {challenges &&
           challenges.map((challenge) => {
             return (
-              <li className={styles.Root__listItem} key={challenge.id}>
-                <Link to={`/challenge/${challenge.id}`}>
-                  <h3>{challenge.title}</h3>
-                </Link>
-              </li>
+              <ChallengeItem key={challenge.id} {...challenge} />
             );
           })}
       </ul>

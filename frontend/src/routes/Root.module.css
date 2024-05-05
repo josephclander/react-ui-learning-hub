@@ -13,15 +13,3 @@
   flex-wrap: wrap;
   gap: 10px;
 }
-
-.Root__listItem {
-  border: 1px solid grey;
-  border-radius: 5px;
-  padding: 10px;
-  transition: background-color 300ms;
-}
-
-.Root__listItem:active,
-.Root__listItem:hover {
-  background-color: var(--colour-primary);
-}

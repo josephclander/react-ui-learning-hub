@@ -1,0 +1,11 @@
+.ChallengeItem__listItem {
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 10px;
+  transition: background-color 300ms;
+}
+
+.ChallengeItem__listItem:active,
+.ChallengeItem__listItem:hover {
+  background-color: var(--colour-primary);
+}
