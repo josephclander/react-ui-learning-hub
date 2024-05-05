@@ -18,7 +18,6 @@ app.get("/challenges", async (req, res) => {
     if (!challenges || challenges.length === 0) {
       return res.status(404).send("No challenges found");
     }
-    console.log(challenges);
     res.send(challenges);
   } catch (error) {
     console.error("Error fetching challenges");
