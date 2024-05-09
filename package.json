@@ -4,13 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "install:frontend": "npm install --prefix frontend",
     "install:backend": "npm install --prefix backend",
-    "install:all": "npm run install:frontend && npm run install:backend",
-    "start": "concurrently \"npm run dev --prefix frontend\" \"npm run dev --prefix backend\""
+    "install:frontend": "npm install --prefix frontend",
+    "install:all": "npm run install:backend && npm run install:frontend",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "start": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "backend:migrate": "npm run migrate --prefix backend",
+    "backend:seed": "npm run seed --prefix backend",
+    "backend:setup-db": "npm run setup-db --prefix backend"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "React",
+    "TypeScript",
+    "PostgreSQL"
+  ],
+  "author": "Joseph Lander",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^8.2.2"

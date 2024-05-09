@@ -4,6 +4,9 @@
   "description": "The backend for the react mini challenges.",
   "main": "server.js",
   "scripts": {
+    "migrate": "sequelize db:migrate",
+    "seed": "sequelize db:seed:all",
+    "setup-db": "npm run migrate && npm run seed",
     "dev": "nodemon server.js"
   },
   "author": "Joseph Lander",
@@ -16,6 +19,7 @@
     "sequelize": "^6.37.3"
   },
   "devDependencies": {
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.1.0",
+    "sequelize-cli": "^6.6.2"
   }
 }
