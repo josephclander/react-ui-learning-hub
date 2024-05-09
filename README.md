@@ -5,6 +5,7 @@
 **A bank of React UI challenges in one repo.** It's Great for practising, and you can even track your attempts. Follow the instructions to set up and edit the relevant solution component, as you see me doing in the video.
 
 ## In Action
+
 <img width="400" alt="ReactMiniChallengesScreenshot" src="https://github.com/josephclander/ReactMiniChallenges-PERSONAL/assets/19231569/af031b43-0405-409c-abe0-0f20d16b8886">
 
 ### To Install
@@ -25,7 +26,14 @@ Follow these steps to set up the environment and start developing:
 
     **Install Database Software:**
 
-    Make sure PostgreSQL is installed on your machine. I used PGAdmin4 to be able to navigate more easily.
+    Make sure PostgreSQL is installed on your machine. I installed via Homebrew on mac with:
+
+    ```bash
+    brew install postgresql
+    brew services start postgresql
+    ```
+
+    I used [PGAdmin4](https://www.pgadmin.org/) to be able to navigate more easily.
 
     **Create a Database:**
 
@@ -69,13 +77,12 @@ Follow these steps to set up the environment and start developing:
 
 <img width="400" alt="Code Screenshot" src="https://github.com/josephclander/ReactMiniChallenges-PERSONAL/assets/19231569/00814854-7a5c-4a12-a0ec-01b23c850d55">
 
-
 **This version contains solutions that I have implemented in practice. If you wish to use it yourself, follow the instructions and remove the code in the components of my solutions.**
 
 1. **Select a Challenge:**
-   
+
    Browse through the list of available challenges in the UI.
-   
+
 2. **Implement the Solution:**
-   
+
    Go to `/src/solutions` and select the relevant component. Complete the component to match the task requirements.
