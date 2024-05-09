@@ -11,9 +11,26 @@
 }
 
 .Challenge__details {
-    width: 400px;
+  width: 400px;
 }
 
 .Challenge__divider {
-    margin: 20px 0;
+  margin: 20px 0;
+}
+
+.Challenge__button {
+  padding: 5px;
+  margin: 20px 0;
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.todo {
+  background-color: var(--colour-primary);
+}
+
+.done {
+  background-color: var(--colour-secondary);
+  color: var(--white);
 }
