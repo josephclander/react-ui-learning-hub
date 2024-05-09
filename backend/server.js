@@ -9,7 +9,7 @@ app.use(cors());
 
 sequelize
   .sync()
-  .then(() => console.log("Drop and re-sync db."))
+  .then(() => console.log("DB Established"))
   .catch((error) => console.error("Error syncing database:", error));
 
 const PORT = process.env.PORT || 3001;
