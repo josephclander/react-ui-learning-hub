@@ -14,11 +14,7 @@ Follow these steps to set up the environment and start developing:
 
 1.  **Clone or Fork the Repository:**
     If you haven't already, clone or fork the repository to your local machine.
-
-    ```bash
-    git clone https://github.com/josephclander/react-mini-challenges-PERSONAL.git
-    cd react-mini-challenges-PERSONAL
-    ```
+    and move into the folder where you will see two directories, 'frontend' and 'backend'.
 
 2.  **Database Setup**
 
