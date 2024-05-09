@@ -2,15 +2,10 @@
 
 # React Mini Challenges
 
-A bank of React UI challenges all in one repo.
+**A bank of React UI challenges in one repo.** It's Great for practising, and you can even track your attempts. Follow the instructions to set up and edit the relevant solution component, as you see me doing in the video.
 
-This version contains some solutions that I have implemented in practice.
-
-**If you wish to use it yourself, follow the instructions and simply remove the code in the components of my solutions.**
-
-<img width="400" alt="ReactMiniChallengesScreenshot" src="https://github.com/josephclander/react-mini-challenges/assets/19231569/ec25d348-82a4-4dce-be34-df95ead5183e">
-
-<img width="400" alt="ChallengeScreenshot" src="https://github.com/josephclander/react-mini-challenges/assets/19231569/19f1d289-b2fc-44de-ada8-df4e91426050">
+## In Action
+<img width="400" alt="ReactMiniChallengesScreenshot" src="https://github.com/josephclander/ReactMiniChallenges-PERSONAL/assets/19231569/af031b43-0405-409c-abe0-0f20d16b8886">
 
 ### To Install
 
@@ -20,8 +15,8 @@ Follow these steps to set up the environment and start developing:
     If you haven't already, clone or fork the repository to your local machine.
 
     ```bash
-    git clone https://github.com/josephclander/react-mini-challenges.git
-    cd react-mini-challenges
+    git clone https://github.com/josephclander/react-mini-challenges-PERSONAL.git
+    cd react-mini-challenges-PERSONAL
     ```
 
 2.  **Database Setup**
@@ -68,7 +63,19 @@ Follow these steps to set up the environment and start developing:
 
 ### To Use
 
+<img width="400" alt="ReactMiniChallengesScreenshot" src="https://github.com/josephclander/ReactMiniChallenges-PERSONAL/assets/19231569/280163b9-fa32-4003-8d52-a905472de302">
+
+<img width="400" alt="ChallengeScreenshot" src="https://github.com/josephclander/ReactMiniChallenges-PERSONAL/assets/19231569/17d1eee2-fd9a-4f80-9742-d2a81692e6eb">
+
+<img width="400" alt="Code Screenshot" src="https://github.com/josephclander/ReactMiniChallenges-PERSONAL/assets/19231569/00814854-7a5c-4a12-a0ec-01b23c850d55">
+
+
+**This version contains solutions that I have implemented in practice. If you wish to use it yourself, follow the instructions and remove the code in the components of my solutions.**
+
 1. **Select a Challenge:**
-   Browse through the list of available challenges.
+   
+   Browse through the list of available challenges in the UI.
+   
 2. **Implement the Solution:**
-   Go to `/src/solutions` and develop the component according to the challenge specifications. Complete the component to match the task requirements.
+   
+   Go to `/src/solutions` and select the relevant component. Complete the component to match the task requirements.
