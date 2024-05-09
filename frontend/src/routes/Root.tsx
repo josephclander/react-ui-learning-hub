@@ -19,6 +19,9 @@ function Root() {
         Here are a bank of mini React challenges. Each aimed to be completed in
         less than 30 minutes.
       </p>
+      <p className={styles.Root__blurb}>
+        Shaded challenges have been marked as attempted.
+      </p>
       <ul className={styles.Root__list}>
         {challenges &&
           challenges.map((challenge: ChallengeProps) => {
