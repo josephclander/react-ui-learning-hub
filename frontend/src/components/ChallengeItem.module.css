@@ -9,3 +9,7 @@
 .ChallengeItem__listItem:hover {
   background-color: var(--colour-primary);
 }
+
+.ChallengeItem__listItem__attempted {
+  background-color: hsl(295, 44%, 83%);
+}

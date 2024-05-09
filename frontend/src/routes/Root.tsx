@@ -3,9 +3,12 @@ import styles from "./Root.module.css";
 import ChallengeItem from "../components/ChallengeItem";
 
 export interface ChallengeProps {
+  attempts: number;
   id: number;
   title: string;
   details: string;
+  createdAt: string; // investigate adding a type guard for date
+  updatedAt: string;
 }
 
 function Root() {
