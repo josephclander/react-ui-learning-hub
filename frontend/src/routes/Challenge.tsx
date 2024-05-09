@@ -7,8 +7,8 @@ import { ChallengeProps } from "./Root";
 
 const Challenge = () => {
   const challengeData = useLoaderData() as ChallengeProps;
-  const [challenge, setChallenge] = useState(challengeData);
-  const [error, setError] = useState<boolean>(false);
+  const [challenge, setChallenge] = useState<ChallengeProps>(challengeData);
+  const [error, setError] = useState<string | null>(null);
 
   if (!challenge) {
     return <Navigate to={"*"} />;
@@ -24,7 +24,7 @@ const Challenge = () => {
   const handleClick = async () => {
     try {
       const method: string = challenge.attempts > 0 ? "decrement" : "increment";
-      const response = await fetch(
+      const response: Response = await fetch(
         `http://localhost:3001/challenges/${challenge.id}/${method}`,
         {
           method: "PUT",
@@ -37,10 +37,10 @@ const Challenge = () => {
 
       const updatedChallenge: ChallengeProps = await response.json();
       setChallenge(updatedChallenge);
-      setError(false);
+      setError(null);
     } catch (error) {
       console.error("Error updating the challenge", error);
-      setError(true);
+      setError("Failed to load data");
     }
   };
 
