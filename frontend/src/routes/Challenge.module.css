@@ -27,10 +27,12 @@
 }
 
 .todo {
+  display: inline-block;
   background-color: var(--colour-primary);
 }
 
 .done {
+  display: inline-block;
   background-color: var(--colour-secondary);
   color: var(--white);
 }
