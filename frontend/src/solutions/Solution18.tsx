@@ -19,7 +19,7 @@ const Solution18 = () => {
     marginTop: "10px",
     height: "20px",
     // 400 / 50 = 8 -> calc proportion of length
-    width: Math.min(progressBarWidth, 8 * count),
+    width: `${Math.min(progressBarWidth, 8 * count)}px`,
     backgroundColor: "#BFE6DE",
     border: "1px solid black",
   };
@@ -28,15 +28,16 @@ const Solution18 = () => {
     position: "absolute",
     marginTop: "10px",
     height: "20px",
-    width: progressBarWidth,
+    width: `${progressBarWidth}px`,
     border: "1px solid black",
   };
 
   const handleCount: React.ChangeEventHandler<HTMLTextAreaElement> = (
     event
   ) => {
-    setCount(event.target.value.length);
-    count >= 50 ? setIsComplete(true) : setIsComplete(false);
+    const newCount = event.target.value.length;
+    setCount(newCount);
+    setIsComplete(newCount >= 50);
   };
 
   return (
@@ -47,7 +48,7 @@ const Solution18 = () => {
         <div style={progressStyle}></div>
       </div>
       <textarea
-        onChange={(event) => handleCount(event)}
+        onChange={handleCount}
         style={inputStyle}
         cols={46}
         rows={3}
