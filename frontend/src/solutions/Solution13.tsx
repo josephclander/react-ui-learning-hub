@@ -38,7 +38,11 @@ const Solution13 = () => {
   const pageList = dataArray.slice(start, start + SIZE);
 
   const handlePagination = (direction: 1 | -1) => {
-    setStart((prevStart) => prevStart + direction * SIZE);
+    setStart((prevStart) => {
+      const newStart = prevStart + direction * SIZE;
+      // ensure start between 0 and Max
+      return Math.max(0, Math.min(newStart, max - SIZE));
+    });
   };
 
   return (
@@ -57,13 +61,21 @@ const Solution13 = () => {
       </ul>
       <hr />
       <div style={{ marginTop: "10px", display: "flex", gap: "5px" }}>
-        {start > 2 && (
-          <button onClick={() => handlePagination(-1)} style={buttonStyle}>
+        {start > 0 && (
+          <button
+            onClick={() => handlePagination(-1)}
+            aria-label="Previous Page"
+            style={buttonStyle}
+          >
             Prev
           </button>
         )}
-        {max - start > 3 && (
-          <button onClick={() => handlePagination(1)} style={buttonStyle}>
+        {start + SIZE < max && (
+          <button
+            onClick={() => handlePagination(1)}
+            aria-label="Next Page"
+            style={buttonStyle}
+          >
             Next
           </button>
         )}
