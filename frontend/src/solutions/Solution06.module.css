@@ -1,0 +1,41 @@
+.container {
+  position: relative;
+  background-color: #bfe6de;
+  width: 100%;
+  height: 500px;
+  display: grid;
+  place-content: center;
+}
+
+.open {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.modal {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  height: 60%;
+  width: 60%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: grid;
+  place-content: center;
+}
+
+.modalMessageBox {
+  background-color: rgb(224, 224, 224);
+  width: 200px;
+  height: 100px;
+  display: grid;
+  place-content: center;
+}
