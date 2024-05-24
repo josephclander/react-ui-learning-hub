@@ -32,17 +32,16 @@ const buttonStyle = {
 
 const Solution13 = () => {
   const [start, setStart] = useState(0);
-  const SIZE = 3;
+  const SIZE = 6;
   const max = dataArray.length;
 
   const pageList = dataArray.slice(start, start + SIZE);
+  const totalPages = Math.ceil(max / SIZE);
+  const page = Math.floor(start / SIZE) + 1;
+  console.log({ start, page });
 
   const handlePagination = (direction: 1 | -1) => {
-    setStart((prevStart) => {
-      const newStart = prevStart + direction * SIZE;
-      // ensure start between 0 and Max
-      return Math.max(0, Math.min(newStart, max - SIZE));
-    });
+    setStart((prevStart) => prevStart + direction * SIZE);
   };
 
   return (
@@ -80,6 +79,9 @@ const Solution13 = () => {
           </button>
         )}
       </div>
+      <p style={{ marginTop: "10px" }}>
+        Page: {page} of {totalPages}
+      </p>
     </div>
   );
 };
