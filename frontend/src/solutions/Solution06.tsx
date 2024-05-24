@@ -6,24 +6,26 @@ const Solution06 = () => {
   const turnOnModal = () => setShowModal(true);
   const turnOffModal = () => setShowModal(false);
 
+  const handleContainerClick: React.MouseEventHandler<HTMLDivElement> = (
+    event
+  ) => {
+    // Check if the click is on the container itself to close the modal
+    if ((event.target as HTMLDivElement).id === "container") {
+      turnOffModal();
+    }
+  };
+
   return (
-    <div
-      id="container"
-      // due to propagation you cannot apply turnOfModal() directly
-      // it will prevent the Show Modal button from working
-      // check the element clicked is the div with id='container'
-      onClick={(event) => {
-        if (
-          event.target instanceof HTMLElement &&
-          event?.target.id === "container"
-        )
-          turnOffModal();
-      }}
-      className={styles.container}
-    >
+    <div className={styles.container}>
       {showModal && (
-        <div className={styles.modal}>
-          <div className={styles.modalMessageBox}>
+        <div
+          id="container"
+          onClick={handleContainerClick}
+          className={styles.modalContainer}
+          role="dialog"
+          aria-modal="true"
+        >
+          <div className={styles.modal}>
             <button
               onClick={turnOffModal}
               aria-label="Click to close"

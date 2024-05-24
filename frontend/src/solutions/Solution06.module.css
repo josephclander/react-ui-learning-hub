@@ -21,21 +21,22 @@
   cursor: pointer;
 }
 
-.modal {
+.modalContainer {
   position: absolute;
-  top: 20%;
-  left: 20%;
-  height: 60%;
-  width: 60%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   display: grid;
   place-content: center;
 }
 
-.modalMessageBox {
+.modal {
+  position: relative;
   background-color: rgb(224, 224, 224);
   width: 200px;
-  height: 100px;
+  height: 200px;
   display: grid;
   place-content: center;
 }
