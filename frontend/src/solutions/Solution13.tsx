@@ -30,65 +30,118 @@ const buttonStyle = {
   cursor: "pointer",
 };
 
+// Prev & Next button version
+// const Solution13 = () => {
+//   const [start, setStart] = useState(0);
+//   const SIZE = 6;
+//   const max = dataArray.length;
+
+//   const pageList = dataArray.slice(start, start + SIZE);
+//   const totalPages = Math.ceil(max / SIZE);
+//   const page = Math.floor(start / SIZE) + 1;
+//   console.log({ start, page });
+
+//   const handlePagination = (direction: 1 | -1) => {
+//     setStart((prevStart) => prevStart + direction * SIZE);
+//   };
+
+//   return (
+//     <div>
+//       <ul>
+//         {pageList.map((person) => {
+//           return (
+//             <li style={{ marginBottom: "10px" }} key={person.id}>
+//               <h3>
+//                 ID:{person.id} {person.name}
+//               </h3>
+//               <p>{person.JobTitle}</p>
+//             </li>
+//           );
+//         })}
+//       </ul>
+//       <hr />
+//       <div style={{ marginTop: "10px", display: "flex", gap: "5px" }}>
+//         {start > 0 && (
+//           <button
+//             onClick={() => handlePagination(-1)}
+//             aria-label="Previous Page"
+//             style={buttonStyle}
+//           >
+//             Prev
+//           </button>
+//         )}
+//         {start + SIZE < max && (
+//           <button
+//             onClick={() => handlePagination(1)}
+//             aria-label="Next Page"
+//             style={buttonStyle}
+//           >
+//             Next
+//           </button>
+//         )}
+//       </div>
+//       <p style={{ marginTop: "10px" }}>
+//         Page: {page} of {totalPages}
+//       </p>
+//     </div>
+//   );
+// };
+
+// Page number version
 const Solution13 = () => {
-  const [start, setStart] = useState(0);
-  const SIZE = 6;
-  const max = dataArray.length;
+  const [currentPage, setCurrentPage] = useState(1);
+  const pageSize = 3;
+  const totalPages = Math.ceil(dataArray.length / pageSize);
 
-  const pageList = dataArray.slice(start, start + SIZE);
-  const totalPages = Math.ceil(max / SIZE);
-  const page = Math.floor(start / SIZE) + 1;
-  console.log({ start, page });
+  // create an array with the number of pages
+  const pages = new Array(totalPages).fill(null).map((_, index) => index + 1);
 
-  const handlePagination = (direction: 1 | -1) => {
-    setStart((prevStart) => prevStart + direction * SIZE);
+  // range to show
+  const pageList = dataArray.slice(
+    (currentPage - 1) * pageSize,
+    currentPage * pageSize
+  );
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
   };
 
   return (
     <div>
       <ul>
-        {pageList.map((person) => {
-          return (
-            <li style={{ marginBottom: "10px" }} key={person.id}>
-              <h3>
-                ID:{person.id} {person.name}
-              </h3>
-              <p>{person.JobTitle}</p>
-            </li>
-          );
-        })}
+        {pageList.map((person) => (
+          <li key={person.id} style={{ marginBottom: "10px" }}>
+            <h3>
+              ID: {person.id} - {person.name}
+            </h3>
+            <p>{person.JobTitle}</p>
+          </li>
+        ))}
       </ul>
-      <hr />
-      <div style={{ marginTop: "10px", display: "flex", gap: "5px" }}>
-        {start > 0 && (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          marginTop: "20px",
+          gap: "5px",
+        }}
+      >
+        {pages.map((page) => (
           <button
-            onClick={() => handlePagination(-1)}
-            aria-label="Previous Page"
-            style={buttonStyle}
+            key={page}
+            onClick={() => handlePageChange(page)}
+            style={{
+              ...buttonStyle,
+              backgroundColor: page === currentPage ? "#7B8BDE" : "transparent",
+            }}
+            aria-label={`Go to page ${page}`}
           >
-            Prev
+            {page}
           </button>
-        )}
-        {start + SIZE < max && (
-          <button
-            onClick={() => handlePagination(1)}
-            aria-label="Next Page"
-            style={buttonStyle}
-          >
-            Next
-          </button>
-        )}
+        ))}
       </div>
-      <p style={{ marginTop: "10px" }}>
-        Page: {page} of {totalPages}
-      </p>
     </div>
   );
 };
-
-// slice the number of values shown
-// if its larger than 3
-// split the length up into the amount of pages required
-// each with links to the next slice of values
 
 export default Solution13;
