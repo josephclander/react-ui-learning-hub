@@ -57,7 +57,7 @@ const liStyle: CSSProperties = {
 const Solution15 = () => {
   const [filteredList, setFilteredList] = useState<string[]>(londonBoroughs);
 
-  const debouncedSetFilteredList = debounce((newList: string[]) => {
+  const debouncedSetFilteredList = debounceSetList((newList: string[]) => {
     setFilteredList(newList);
   });
 
@@ -89,19 +89,22 @@ export default Solution15;
 
 // debounce function
 // required to get type definitions from chatGPT!
+// first iteration was too generic and not at all readable
+// forced types for args for readability
+function debounceSetList(
+  // callback here is referencing setFilteredList
+  // takes a string array and returns nothing
+  callback: (newList: string[]) => void,
+  delay: number = 500
+): (newList: string[]) => void {
+  let timer: number | null = null;
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-type CallbackFunction = (...args: any[]) => void;
-
-function debounce<F extends CallbackFunction>(cb: F, delay: number = 500): F {
-  let timer: ReturnType<typeof setTimeout> | null = null;
-
-  const debouncedFunction = (...args: Parameters<F>) => {
-    if (timer !== null) {
+  return (newList: string[]) => {
+    if (timer) {
       clearTimeout(timer);
     }
-    timer = setTimeout(() => cb(...args), delay);
+    timer = setTimeout(() => {
+      callback(newList);
+    }, delay);
   };
-
-  return debouncedFunction as F;
 }
