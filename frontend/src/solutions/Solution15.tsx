@@ -55,14 +55,19 @@ const liStyle: CSSProperties = {
 };
 
 const Solution15 = () => {
-  const [filteredList, setFilteredList] = useState(londonBoroughs);
+  const [filteredList, setFilteredList] = useState<string[]>(londonBoroughs);
+
+  const debouncedSetFilteredList = debounce((newList: string[]) => {
+    setFilteredList(newList);
+  });
 
   const handleInput: React.ChangeEventHandler<HTMLInputElement> = (event) => {
     const searchInput = event?.target.value;
     const updatedList = londonBoroughs.filter((boro) =>
       boro.toLowerCase().includes(searchInput.toLowerCase())
     );
-    setFilteredList(updatedList);
+
+    debouncedSetFilteredList(updatedList);
   };
 
   return (
@@ -81,3 +86,22 @@ const Solution15 = () => {
 };
 
 export default Solution15;
+
+// debounce function
+// required to get type definitions from chatGPT!
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type CallbackFunction = (...args: any[]) => void;
+
+function debounce<F extends CallbackFunction>(cb: F, delay: number = 500): F {
+  let timer: ReturnType<typeof setTimeout> | null = null;
+
+  const debouncedFunction = (...args: Parameters<F>) => {
+    if (timer !== null) {
+      clearTimeout(timer);
+    }
+    timer = setTimeout(() => cb(...args), delay);
+  };
+
+  return debouncedFunction as F;
+}
