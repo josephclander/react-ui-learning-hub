@@ -82,7 +82,7 @@ const Solution17 = () => {
     };
 
   const addItemHandler = () => {
-    // unique ID
+    // unique ID for purpose of React handling
     const newItem = { id: Date.now() + items.length, value: "" };
     setItems([...items, newItem]);
   };
