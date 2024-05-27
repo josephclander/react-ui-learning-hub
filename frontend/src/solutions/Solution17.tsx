@@ -24,7 +24,7 @@ const showButtonStyle: CSSProperties = {
   margin: "10px 0",
 };
 
-const AddButtonStyle: CSSProperties = {
+const addButtonStyle: CSSProperties = {
   width: "fit-content",
   padding: "5px",
   margin: "10px 0",
@@ -60,49 +60,49 @@ type ItemProps = {
   value: string;
 };
 
+type FormState = {
+  showPartner: boolean;
+  firstName: string;
+  lastName: string;
+  partnerFirstName: string;
+  partnerLastName: string;
+  items: ItemProps[];
+};
+
 const Solution17 = () => {
-  const [showPartner, toggleShowPartner] = useState(false);
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [partnerFirstName, setPartnerFirstName] = useState<string>("");
-  const [partnerLastName, setPartnerLastName] = useState<string>("");
-  const [items, setItems] = useState<ItemProps[]>([]);
-
-  const partnerShowButton = (event: React.MouseEvent<HTMLButtonElement>) => {
-    event.preventDefault();
-    toggleShowPartner((prevState) => !prevState);
-  };
-
-  const partnerButtonMessage = showPartner ? "Remove" : "Add";
+  const [formState, setFormState] = useState<FormState>({
+    showPartner: false,
+    firstName: "",
+    lastName: "",
+    partnerFirstName: "",
+    partnerLastName: "",
+    items: [],
+  });
 
   const handleInputChange =
-    (setter: React.Dispatch<React.SetStateAction<string>>) =>
-    (event: ChangeEvent<HTMLInputElement>) => {
-      setter(event.target.value);
+    (field: keyof FormState) => (event: ChangeEvent<HTMLInputElement>) => {
+      setFormState((prev) => ({ ...prev, [field]: event.target.value }));
     };
 
-  const addItemHandler = () => {
-    // unique ID for purpose of React handling
-    const newItem = { id: Date.now() + items.length, value: "" };
-    setItems([...items, newItem]);
+  const toggleShowPartner = () => {
+    setFormState((prev) => ({ ...prev, showPartner: !prev.showPartner }));
   };
 
-  const deleteItemHandler =
-    (itemId: number) => (event: React.MouseEvent<HTMLButtonElement>) => {
-      event.preventDefault(); // prevent default behavior
-      setItems(items.filter((item) => item.id !== itemId));
-    };
+  const addItemHandler = () => {
+    const newItem = { id: Date.now() + formState.items.length, value: "" };
+    setFormState((prev) => ({ ...prev, items: [...prev.items, newItem] }));
+  };
+
+  const deleteItemHandler = (itemId: number) => {
+    setFormState((prev) => ({
+      ...prev,
+      items: prev.items.filter((item) => item.id !== itemId),
+    }));
+  };
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    const formData = {
-      firstName,
-      lastName,
-      partnerData: showPartner ? { partnerFirstName, partnerLastName } : null,
-      items: items.map((item) => item.value),
-    };
-
-    console.log(formData);
+    console.log(formState);
   };
 
   return (
@@ -114,77 +114,76 @@ const Solution17 = () => {
           <label htmlFor="firstName" style={labelStyle}>
             First Name
             <input
+              required
               style={inputStyle}
               type="text"
-              value={firstName}
-              onChange={handleInputChange(setFirstName)}
+              value={formState.firstName}
+              onChange={handleInputChange("firstName")}
             />
           </label>
           <label htmlFor="lastName" style={labelStyle}>
             Last Name
             <input
+              required
               style={inputStyle}
               type="text"
-              value={lastName}
-              onChange={handleInputChange(setLastName)}
+              value={formState.lastName}
+              onChange={handleInputChange("lastName")}
             />
           </label>
           <h3 style={h3Style}>Partner</h3>
           <button
             type="button"
-            onClick={partnerShowButton}
-            id="partner"
-            aria-label="Add/Remove Partner"
+            onClick={toggleShowPartner}
             style={showButtonStyle}
           >
-            {partnerButtonMessage}
+            {formState.showPartner ? "Remove" : "Add"} Partner
           </button>
-          {showPartner && (
+          {formState.showPartner && (
             <>
               <label htmlFor="partnerFirstName" style={labelStyle}>
                 First Name
                 <input
+                  required
                   style={inputStyle}
                   type="text"
-                  name="partnerFirstName"
-                  id="partnerFirstName"
-                  value={partnerFirstName}
-                  onChange={handleInputChange(setPartnerFirstName)}
+                  value={formState.partnerFirstName}
+                  onChange={handleInputChange("partnerFirstName")}
                 />
               </label>
               <label htmlFor="partnerLastName" style={labelStyle}>
                 Last Name
                 <input
+                  required
                   style={inputStyle}
                   type="text"
-                  name="partnerLastName"
-                  id="partnerLastName"
-                  value={partnerLastName}
-                  onChange={handleInputChange(setPartnerLastName)}
+                  value={formState.partnerLastName}
+                  onChange={handleInputChange("partnerLastName")}
                 />
               </label>
             </>
           )}
           <h3 style={h3Style}>Items to Include</h3>
-          {items.map((item, index) => (
+          {formState.items.map((item, index) => (
             <div key={item.id} style={itemStyle}>
               <input
-                style={inputStyle}
+                required
                 type="text"
+                style={inputStyle}
                 value={item.value}
                 onChange={(e) => {
-                  const newItems = [...items];
+                  const newItems = [...formState.items];
                   newItems[index] = {
                     ...newItems[index],
                     value: e.target.value,
                   };
-                  setItems(newItems);
+                  setFormState((prev) => ({ ...prev, items: newItems }));
                 }}
               />
               <button
                 type="button"
                 style={deleteButtonStyle}
-                onClick={deleteItemHandler(item.id)}
+                onClick={() => deleteItemHandler(item.id)}
               >
                 Delete
               </button>
@@ -193,9 +192,8 @@ const Solution17 = () => {
           <button
             type="button"
             onClick={addItemHandler}
-            id="item"
+            style={addButtonStyle}
             aria-label="Add Item"
-            style={AddButtonStyle}
           >
             Add Item
           </button>
