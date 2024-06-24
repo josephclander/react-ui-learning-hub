@@ -7,8 +7,7 @@ import { ChallengeProps } from "./Root";
 
 const Challenge = () => {
   const challengeData = useLoaderData() as ChallengeProps;
-  const [challenge, setChallenge] = useState<ChallengeProps>(challengeData);
-  const [error, setError] = useState<string | null>(null);
+  const [challenge] = useState<ChallengeProps>(challengeData);
 
   if (!challenge) {
     return <Navigate to={"*"} />;
@@ -16,50 +15,93 @@ const Challenge = () => {
 
   const SolutionComponent = solutionComponents[challenge.id];
 
-  const attemptClass =
-    challenge?.attempts > 0 ? `${styles.done}` : `${styles.todo}`;
-
-  const shouldShowButton = challenge?.attempts !== undefined;
-
-  const handleClick = async () => {
-    try {
-      const method: string = challenge.attempts > 0 ? "decrement" : "increment";
-      const response: Response = await fetch(
-        `http://localhost:3001/challenges/${challenge.id}/${method}`,
-        {
-          method: "PUT",
-        }
-      );
-
-      if (!response.ok) {
-        throw new Error(`Request failed with status ${response.status}`);
-      }
-
-      const updatedChallenge: ChallengeProps = await response.json();
-      setChallenge(updatedChallenge);
-      setError(null);
-    } catch (error) {
-      console.error("Error updating the challenge", error);
-      setError("Failed to load data");
-    }
-  };
-
   return (
     <main className={styles.Challenge__container}>
-      <h1 className={styles.Challenge__heading}>CHALLENGE {challenge.id}</h1>
-      <h2 className={styles.Challenge__title}>{challenge.title}</h2>
-      {error && <div>{error}</div>}
-      {shouldShowButton && (
-        <button
-          onClick={handleClick}
-          className={`${styles.Challenge__button} ${attemptClass}`}
-        >
-          {challenge?.attempts > 0 ? "DONE" : "TODO"}
-        </button>
-      )}
+      <h1 className={styles.Challenge__heading}>{challenge.title}</h1>
       <p className={styles.Challenge__details}>{challenge.details}</p>
       <hr className={styles.Challenge__divider} />
       {SolutionComponent ? <SolutionComponent /> : <p>No solution available</p>}
+      <hr className={styles.Challenge__divider} />
+      <h2>Code</h2>
+      <div className="code-container">
+        <pre>
+          <code className="language-javascript">
+            {`import { useState } from "react";
+import styles from "./Solution01.module.css";
+
+const Solution01 = () => {
+  const [count, setCount] = useState(0);
+
+  const handleAdd = () => {
+    setCount((prevCount) => prevCount + 1);
+  };
+
+  const handleMinus = () => {
+    setCount((prevCount) => prevCount - 1);
+  };
+
+  return (
+    <div className={styles.container}>
+      <p className={styles.counter}>{count}</p>
+      <div className={styles.buttons__container}>
+        <button className={styles.button} onClick={handleAdd}>
+          +
+        </button>
+        <button className={styles.button} onClick={handleMinus}>
+          -
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default Solution01;
+`}
+          </code>
+        </pre>
+      </div>
+      <hr className={styles.Challenge__divider} />
+      <h2>Styling</h2>
+      <div className="code-container">
+        <pre>
+          <code className="language-javascript">
+            {`.container {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  width: 200px;
+  padding: 20px;
+  align-items: center;
+}
+
+.counter {
+  font-weight: bold;
+}
+
+.buttons__container {
+  display: flex;
+  gap: 10px;
+}
+
+.button {
+  display: grid;
+  place-content: center;
+  padding: 5px;
+  width: 30px;
+  aspect-ratio: 1 / 1;
+  line-height: 1;
+}
+`}
+          </code>
+        </pre>
+      </div>
+      <hr className={styles.Challenge__divider} />
+      <h2>Explanation</h2>
+      <p>Hooks: useState</p>
+      <p>note with handleAdd and handleMinus, you use the functional pattern that uses the previous state. This is key to ensure that you are using the version of state that you need to, just in case it gets updated from elsewhere.</p>
     </main>
   );
 };
