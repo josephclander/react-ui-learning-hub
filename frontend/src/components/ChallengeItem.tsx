@@ -10,7 +10,7 @@ const ChallengeItem = (challenge: ChallengeProps) => {
       }`}
     >
       <Link to={`/challenge/${challenge.id}`}>
-        <h3>{challenge.title}</h3>
+        <h3>{challenge.title} {challenge.attempts === 0 && "🚧"}</h3>
       </Link>
     </li>
   );
