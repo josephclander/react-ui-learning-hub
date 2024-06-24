@@ -16,11 +16,10 @@ function Root() {
   return (
     <div className={styles.Root__container}>
       <p className={styles.Root__blurb}>
-        Here are a bank of mini React challenges. Each aimed to be completed in
-        less than 30 minutes.
+        This isn't a library of components to just copy paste. This library shows you the key to how it was implemented.
       </p>
       <p className={styles.Root__blurb}>
-        Shaded challenges have been marked as attempted.
+        Browse the library of common React UI components to see example code with an explanation on the key to making it work.
       </p>
       <ul className={styles.Root__list}>
         {challenges &&
