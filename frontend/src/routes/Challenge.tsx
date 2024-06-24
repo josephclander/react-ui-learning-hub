@@ -1,5 +1,6 @@
 import { Navigate, useLoaderData } from "react-router-dom";
 import { useState } from "react";
+import Highlight from "react-highlight";
 
 import solutionComponents from "../solutions/SolutionIndex";
 import styles from "./Challenge.module.css";
@@ -24,9 +25,8 @@ const Challenge = () => {
       <hr className={styles.Challenge__divider} />
       <h2>Code</h2>
       <div className="code-container">
-        <pre>
-          <code className="language-javascript">
-            {`import { useState } from "react";
+        <Highlight className="language-typescript">
+          {`import { useState } from "react";
 import styles from "./Solution01.module.css";
 
 const Solution01 = () => {
@@ -57,15 +57,13 @@ const Solution01 = () => {
 
 export default Solution01;
 `}
-          </code>
-        </pre>
+        </Highlight>
       </div>
       <hr className={styles.Challenge__divider} />
       <h2>Styling</h2>
       <div className="code-container">
-        <pre>
-          <code className="language-javascript">
-            {`.container {
+        <Highlight className="language-css">
+          {`.container {
   margin: 10px;
   display: flex;
   flex-direction: column;
@@ -95,13 +93,17 @@ export default Solution01;
   line-height: 1;
 }
 `}
-          </code>
-        </pre>
+        </Highlight>
       </div>
       <hr className={styles.Challenge__divider} />
       <h2>Explanation</h2>
       <p>Hooks: useState</p>
-      <p>note with handleAdd and handleMinus, you use the functional pattern that uses the previous state. This is key to ensure that you are using the version of state that you need to, just in case it gets updated from elsewhere.</p>
+      <p>
+        note with handleAdd and handleMinus, you use the functional pattern that
+        uses the previous state. This is key to ensure that you are using the
+        version of state that you need to, just in case it gets updated from
+        elsewhere.
+      </p>
     </main>
   );
 };
