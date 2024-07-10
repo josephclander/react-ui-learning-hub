@@ -1,4 +1,4 @@
-<img width=150px height=150px alt="React Mini Challeges Logo" src="https://github.com/josephclander/react-mini-challenges/assets/19231569/5288fb62-9209-4f5d-ba3c-006803c4f5b3" />
+<img width=150px height=150px alt="React Mini Challenges Logo" src="https://github.com/josephclander/react-mini-challenges/assets/19231569/5288fb62-9209-4f5d-ba3c-006803c4f5b3" />
 
 # React Mini Challenges
 

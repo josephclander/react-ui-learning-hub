@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --font-color-primary: rgb(10, 10, 10);
+  --font-color-accent: rgb(64, 64, 188);
+  --colour-primary: #bfe6de;
+  --colour-secondary: #7b8cde;
+  --white: rgb(245, 245, 245);
+  --code-background: #2e3440;
+
+  --border-radius: 5px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--font-color-primary);
+  background-color: var(--white);
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: var(--font-color-accent);
+}
+
+ul {
+  list-style-type: none;
+}
+
+p {
+  margin: 1rem 0;
+  line-height: 1.4;
+}
+
+.code {
+  font-weight: bold;
+  color: var(--font-color-primary);
+  background-color: var(--colour-primary);
+  padding: 3px;
+  border-radius: var(--border-radius);
+}
+
+.solution-container {
+  background-color: var(--colour-primary);
+  padding: 2rem 0.5rem;
+  border-radius: var(--border-radius);
+}
+
+.Component__container {
+  margin: 10px;
+  max-width: 600px;
+}
+
+.Component__heading,
+.Component__divider {
+  margin: 2rem 0 1rem;
+  color: var(--code-background);
+}
