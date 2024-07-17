@@ -56,6 +56,10 @@ p {
   line-height: 1.4;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 .code {
   font-weight: bold;
   color: var(--font-color-primary);

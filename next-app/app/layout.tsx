@@ -6,7 +6,7 @@ import Nav from "./_components/Nav";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "How To React UI",
+  title: "HOW TO: React UI - A library of standard tasks focusing on the how.",
   description: "A library designed to show you HOW to build React components.",
 };
 
