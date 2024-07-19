@@ -5,4 +5,10 @@
   padding: 10px;
   align-items: center;
   gap: 10px;
+  scale: 1;
+  transition: scale 0.3s;
+}
+
+.Nav__Link:hover {
+  scale: 1.05;
 }
