@@ -1,7 +1,7 @@
 // file: next-app/app/_components/ComponentItem.tsx
 
 import Link from "next/link";
-import { ComponentProps } from "../_assets/componentsData";
+import { ComponentProps } from "../../_assets/componentsData";
 import styles from "./ComponentItem.module.css";
 
 const ComponentItem = (component: ComponentProps) => {

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Logo from "../_assets/Logo";
+import Logo from "../../_assets/Logo";
 import styles from "./Nav.module.css";
 
 const Nav = () => {

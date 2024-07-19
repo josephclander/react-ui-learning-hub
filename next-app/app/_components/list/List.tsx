@@ -1,7 +1,7 @@
 // file: next-app/app/_components/list/List.tsx
 
 import styles from "./List.module.css";
-import ComponentItem from "../../_components/ComponentItem";
+import ComponentItem from "../../_components/componentItem/ComponentItem";
 import { ComponentProps } from "../../_assets/componentsData";
 
 interface ListProps {
