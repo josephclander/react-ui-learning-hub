@@ -6,7 +6,7 @@ const ComponentItem = (component: ComponentProps) => {
   // highlight completed items
   const conditionalStyle = component.complete
     ? { backgroundColor: "#BFE6DE" }
-    : { backgroundColor: "transparent" };
+    : { backgroundColor: "white" };
 
   return (
     <li

@@ -1,5 +1,5 @@
 .ComponentItem__listItem {
-  border: 1px solid grey;
+  border: 3px solid black;
   border-radius: 5px;
   padding: 10px;
   transition: background-color 300ms;
@@ -8,8 +8,4 @@
 .ComponentItem__listItem:active,
 .ComponentItem__listItem:hover {
   background-color: var(--colour-primary);
-}
-
-.ComponentItem__listItem__attempted {
-  background-color: hsl(295, 44%, 83%);
 }

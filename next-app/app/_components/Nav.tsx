@@ -5,10 +5,10 @@ import styles from "./Nav.module.css";
 const Nav = () => {
   return (
     <nav className={styles.Nav}>
-      <Logo width={"100px"} />
       <Link className={styles.Nav__Link} href="/">
-        <h1 className={styles.Nav__Header}>HOW TO: React UI</h1>
+        <Logo width={"40px"} />
       </Link>
+      <h1 className={styles.Nav__Header}>HOW TO: React UI</h1>
     </nav>
   );
 };

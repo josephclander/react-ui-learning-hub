@@ -1,0 +1,26 @@
+.container {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../_assets/jigsaw_tile2.png"),
+    linear-gradient(
+      127deg,
+      rgba(123, 139, 208, 1) 0%,
+      rgba(191, 230, 208, 1) 100%
+    );
+  background-repeat: repeat, no-repeat;
+  background-position: top left, top left;
+  background-size: auto, cover;
+  border-radius: 5px;
+}
+
+.tagline {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.8;
+  border: 3px solid black;
+  border-radius: 5px;
+  padding: 15px;
+  background: white;
+}

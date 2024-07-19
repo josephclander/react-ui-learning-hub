@@ -6,8 +6,10 @@ import Nav from "./_components/Nav";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "HOW TO: React UI - A library of standard tasks focusing on the how.",
-  description: "A library designed to show you HOW to build React components.",
+  title:
+    "HOW TO: React UI - A library designed to show you HOW to build React components.",
+  description:
+    "A React component library focused on showing you how to build them.",
 };
 
 export default function RootLayout({
