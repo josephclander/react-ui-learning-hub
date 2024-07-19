@@ -1,6 +1,8 @@
-.Nav {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px;
+.Nav__Link {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  padding: 10px;
+  align-items: center;
+  gap: 10px;
 }

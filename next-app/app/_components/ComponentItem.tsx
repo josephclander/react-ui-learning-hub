@@ -8,19 +8,17 @@ const ComponentItem = (component: ComponentProps) => {
   // highlight completed items
   const conditionalStyle = component.complete
     ? { backgroundColor: "#BFE6DE" }
-    : { backgroundColor: "white" };
+    : { backgroundColor: "white", color: "#aaaaaa" };
 
   return (
-    <li
-      style={conditionalStyle}
-      className={`${styles.ComponentItem__listItem} `}
-    >
-      <Link href={`/components/${component.slug}`}>
+    <Link href={`/components/${component.slug}`}>
+      <li style={conditionalStyle} className={`${styles.listItem} `}>
         <h3>
           {component.title} {component.complete ? "" : "🚧"}
         </h3>
-      </Link>
-    </li>
+        <p>{component.details}</p>
+      </li>
+    </Link>
   );
 };
 

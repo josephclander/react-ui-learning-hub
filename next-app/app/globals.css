@@ -44,7 +44,7 @@ body {
 a,
 a:visited {
   text-decoration: none;
-  color: var(--font-color-accent);
+  color: var(--font-color-primary);
 }
 
 ul {

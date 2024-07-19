@@ -1,11 +1,13 @@
-.ComponentItem__listItem {
+.listItem {
   border: 3px solid black;
   border-radius: 5px;
   padding: 10px;
   transition: background-color 300ms;
+  width: 300px;
+  height: 200px;
 }
 
-.ComponentItem__listItem:active,
-.ComponentItem__listItem:hover {
+.listItem:active,
+.listItem:hover {
   background-color: var(--colour-primary);
 }

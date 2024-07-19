@@ -4,11 +4,11 @@ import styles from "./Nav.module.css";
 
 const Nav = () => {
   return (
-    <nav className={styles.Nav}>
+    <nav>
       <Link className={styles.Nav__Link} href="/">
         <Logo width={"40px"} />
+        <h1>HOW TO: React UI</h1>
       </Link>
-      <h1 className={styles.Nav__Header}>HOW TO: React UI</h1>
     </nav>
   );
 };
