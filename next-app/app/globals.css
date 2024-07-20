@@ -67,20 +67,3 @@ p {
   padding: 3px;
   border-radius: var(--border-radius);
 }
-
-.solution-container {
-  background-color: var(--colour-primary);
-  padding: 2rem 0.5rem;
-  border-radius: var(--border-radius);
-}
-
-.Component__container {
-  margin: 10px;
-  max-width: 600px;
-}
-
-.Component__heading,
-.Component__divider {
-  margin: 2rem 0 1rem;
-  color: var(--code-background);
-}

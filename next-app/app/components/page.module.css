@@ -1,0 +1,46 @@
+.Component__container {
+  padding: 50px 10px;
+  background-image: url("../_assets/jigsaw_tile2.png"),
+    linear-gradient(
+      127deg,
+      rgba(123, 139, 208, 1) 0%,
+      rgba(191, 230, 208, 1) 100%
+    );
+  background-repeat: repeat, no-repeat;
+  background-position: top left, top left;
+  background-size: auto, cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Component {
+  max-width: 600px;
+}
+
+.Component__HeadingContainer,
+.Component__SolutionContainer,
+.Component__ExplanationContainer,
+.Component__CodeContainer {
+  padding: 10px;
+  border: 3px solid black;
+  border-radius: var(--border-radius);
+}
+
+.Component__HeadingContainer,
+.Component__ExplanationContainer {
+  background-color: white;
+}
+
+.Component__SolutionContainer {
+  background-color: var(--colour-primary);
+  min-height: 250px;
+}
+
+.Component__heading {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  color: white;
+}

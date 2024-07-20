@@ -1,4 +1,5 @@
 import { codeToHtml } from "shiki";
+import styles from './CodeStyling.module.css'
 
 const CodeStyling = async ({
   code,
@@ -7,11 +8,7 @@ const CodeStyling = async ({
   code: string;
   language: string;
 }) => {
-  const elementStyle = {
-    padding: "15px",
-    backgroundColor: "#2e3440",
-    borderRadius: "5px"
-  };
+  
 
   const html = await codeToHtml(code, {
     lang: language,
@@ -19,7 +16,7 @@ const CodeStyling = async ({
   });
 
   return (
-    <div style={elementStyle} dangerouslySetInnerHTML={{ __html: html }} />
+    <div className={styles.element} dangerouslySetInnerHTML={{ __html: html }} />
   );
 };
 

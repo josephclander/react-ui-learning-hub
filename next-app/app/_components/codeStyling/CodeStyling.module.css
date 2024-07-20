@@ -1,0 +1,7 @@
+.element {
+  padding: 15px;
+  background-color: #2e3440;
+  border-radius: var(--border-radius);
+  border: 3px solid white;
+  overflow-x: scroll;
+}

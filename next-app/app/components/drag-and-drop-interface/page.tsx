@@ -1,26 +1,33 @@
 import { info } from "./info";
+import styles from "../page.module.css";
 import Solution from "./Solution";
-import CodeStyling from "../../_components/CodeStyling";
+import CodeStyling from "../../_components/codeStyling/CodeStyling";
 import Explanation from "./Explanation";
 import { solutionCode } from "./solutionCode";
 import { solutionCss } from "./solutionCss";
 
 const Component = () => {
   return (
-    <main className="Component__container">
-      <h1 className="Component__heading">{info && info.title}</h1>
-      <p className="Component__details">{info && info.details}</p>
-      <hr className="Component__divider" />
-      <h2 className="Component__heading">Solution</h2>
-      <div className="solution-container">
-        <Solution />
+    <main className={styles.Component__container}>
+      <div className={styles.Component}>
+        <div className={styles.Component__HeadingContainer}>
+          <h1>{info && info.title}</h1>
+          <p className={styles.Component__details}>{info && info.details}</p>
+        </div>
+        <h2 className={styles.Component__heading}>Solution</h2>
+        <div className={styles.Component__SolutionContainer}>
+          <Solution />
+        </div>
+        <h2 className={styles.Component__heading}>Explanation</h2>
+        <div className={styles.Component__ExplanationContainer}>
+          <Explanation />
+        </div>
+        <h2 className={styles.Component__heading}>Code</h2>
+
+        <CodeStyling code={solutionCode} language="typescript" />
+        <h2 className={styles.Component__heading}>Styling</h2>
+        <CodeStyling code={solutionCss} language="css" />
       </div>
-      <h2 className="Component__heading">Explanation</h2>
-      <Explanation />
-      <h2 className="Component__heading">Code</h2>
-      <CodeStyling code={solutionCode} language="typescript" />
-      <h2 className="Component__heading">Styling</h2>
-      <CodeStyling code={solutionCss} language="css" />
     </main>
   );
 };
