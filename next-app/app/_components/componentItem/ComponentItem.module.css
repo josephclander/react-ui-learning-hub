@@ -3,7 +3,8 @@
   border-radius: 5px;
   padding: 10px;
   transition: background-color 300ms;
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   height: 200px;
   scale: 1;
   transition: scale 0.3s;
