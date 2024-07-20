@@ -17,6 +17,7 @@
 }
 
 .Component {
+  width: 100%;
   max-width: 600px;
 }
 
@@ -37,6 +38,7 @@
 .Component__SolutionContainer {
   background-color: var(--colour-primary);
   min-height: 250px;
+  overflow-x: scroll;
 }
 
 .Component__heading {
