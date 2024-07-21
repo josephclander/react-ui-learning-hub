@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import styles from "./Solution07.module.css";
+import styles from "./Solution.module.css";
 
 const Solution = () => {
   type tabProps = "One" | "Two" | "Three";

@@ -1,4 +1,4 @@
-import styles from "./Solution28.module.css";
+import styles from "./Solution.module.css";
 
 const Solution = () => {
   return (

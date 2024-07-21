@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-import styles from "./Solution22.module.css";
+import styles from "./Solution.module.css";
 
 const Solution = () => {
   const dragItem1 = useRef<HTMLDivElement>(null);

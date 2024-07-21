@@ -31,20 +31,20 @@ const Solution = () => {
     // Only start a new timer if count is greater than 0
     if (count > 0) {
       if (intervalRef.current !== null) {
-        clearInterval(intervalRef.current); // Clear existing timer
+        window.clearInterval(intervalRef.current); // Clear existing timer
       }
       intervalRef.current = setInterval(() => {
         setCount((prevCount) => (prevCount > 0 ? prevCount - 1 : 0));
-      }, 1000);
+      }, 1000) as unknown as number;
     } else if (intervalRef.current) {
-      clearInterval(intervalRef.current);
+      window.clearInterval(intervalRef.current);
       intervalRef.current = null;
     }
 
     return () => {
       // Cleanup interval on component unmount or count changes
       if (intervalRef.current !== null) {
-        clearInterval(intervalRef.current);
+        window.clearInterval(intervalRef.current);
       }
     };
   }, [count]); // Effect depends on count

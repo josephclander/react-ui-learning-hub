@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, CSSProperties } from "react";
-import styles from "./Solution08.module.css";
+import styles from "./Solution.module.css";
 
 const Solution = () => {
   const [showOne, toggleShowOne] = useState(false);

@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./Solution09.module.css";
+import styles from "./Solution.module.css";
 import { useRef } from "react";
 
 const Solution = () => {

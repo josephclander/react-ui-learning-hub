@@ -1,7 +1,8 @@
 "use client";
 
 import { MouseEvent, useMemo, useRef, useState } from "react";
-import styles from "./Solution16.module.css";
+import Image from "next/image";
+import styles from "./Solution.module.css";
 
 const Solution = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -32,7 +33,7 @@ const Solution = () => {
       onMouseLeave={handleReset}
       className={styles.container}
     >
-      <img
+      <Image
         style={{ transformOrigin: `${position.x}px ${position.y}px` }}
         className={`${styles.image}`}
         src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"

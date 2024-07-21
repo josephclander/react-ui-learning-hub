@@ -107,6 +107,6 @@ function debounceSetList(
     }
     timer = setTimeout(() => {
       callback(newList);
-    }, delay);
+    }, delay) as unknown as number;
   };
 }

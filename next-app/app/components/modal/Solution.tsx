@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import styles from "./Solution06.module.css";
+import styles from "./Solution.module.css";
 
 const Solution = () => {
   const [showModal, setShowModal] = useState(false);
