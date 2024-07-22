@@ -1,4 +1,4 @@
-export const solutionCss = `.button {
+.button {
   display: block;
   padding: 10px 20px;
   width: 200px;
@@ -20,4 +20,3 @@ export const solutionCss = `.button {
 .textArea {
   padding: 5px;
 }
-`;

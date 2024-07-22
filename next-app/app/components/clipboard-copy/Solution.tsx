@@ -1,35 +1,21 @@
 "use client";
 
 import { useRef, useState } from "react";
+import styles from "./Solution.module.css";
 
 const Solution = () => {
-  const initialButtonStyle = {
-    display: "block",
-    padding: "10px 20px",
-    width: "200px",
-    cursor: "pointer",
-    margin: "5px 0 50px",
-    backgroundColor: "#e9e9e9",
-    transform: "scale(1)",
-    transition: "all 0.3s ease-out",
-  };
-
   const initialButtonText = "Copy to Clipboard";
 
-  const [buttonStyle, setButtonStyle] = useState(initialButtonStyle);
+  const [buttonIdle, setButtonIdle] = useState(true);
   const [buttonText, setButtonText] = useState<string>(initialButtonText);
 
   const buttonFeedback = () => {
     setButtonText("Copied!");
-    setButtonStyle((prevBtnStyle) => ({
-      ...prevBtnStyle,
-      transform: "scale(1.05)",
-      backgroundColor: "#BFE6DE",
-    }));
-    // return text and button after 1 second
+    setButtonIdle(false);
+    // return text and button after half a second
     setTimeout(() => {
       setButtonText(initialButtonText);
-      setButtonStyle(initialButtonStyle);
+      setButtonIdle(true);
     }, 500);
   };
 
@@ -59,14 +45,21 @@ const Solution = () => {
         cols={50}
         rows={5}
         placeholder="Enter your message to be copied here"
+        className={styles.textArea}
       />
-      <button onClick={clickHandler} style={buttonStyle}>
+      <button
+        onClick={clickHandler}
+        className={`${styles.button} ${
+          buttonIdle ? styles.idle : styles.active
+        }`}
+      >
         {buttonText}
       </button>
       <textarea
         cols={50}
         rows={5}
         placeholder="Test that you can paste it when you're done!"
+        className={styles.textArea}
       />
     </div>
   );
