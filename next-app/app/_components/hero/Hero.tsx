@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <div className={styles.container}>
       <p className={styles.tagline}>
-        <div className="bold">Explore beyond the code</div>
+        <div className="bold">EXPLORE BEYOND THE CODE</div>
         <span className={styles.line}>
           Master the creation of your own React components.
         </span>
