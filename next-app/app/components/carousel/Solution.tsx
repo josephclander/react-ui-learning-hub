@@ -29,6 +29,7 @@ const Solution = () => {
           <li className={styles.mockImage}>9</li>
         </ul>
       </div>
+
       <div className={styles.container}>
         <h2>Horizontal Buttons</h2>
         <ul ref={listRef} className={styles.list2}>
@@ -59,6 +60,7 @@ const Solution = () => {
           </button>
         </div>
       </div>
+
       <div className={styles.container}>
         <h2>Horizontal Snap</h2>
         <ul className={styles.list3}>
