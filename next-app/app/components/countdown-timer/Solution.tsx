@@ -1,24 +1,12 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
+import styles from "./Solution.module.css";
 
 const Solution = () => {
   const inputRef = useRef<null | HTMLInputElement>(null);
   const intervalRef = useRef<number | null>(null);
   const [count, setCount] = useState(0);
-
-  const timeStyle = {
-    padding: "5px",
-    display: "block",
-    margin: "5px 0",
-    width: "100px",
-  };
-
-  const displayStyle = {
-    padding: "5px",
-    display: "block",
-    margin: "5px 0",
-  };
 
   const handleStart = () => {
     const inputValue = inputRef.current?.value;
@@ -50,14 +38,22 @@ const Solution = () => {
   }, [count]); // Effect depends on count
 
   return (
-    <div>
-      <label htmlFor="time">Time</label>
-      <input ref={inputRef} type="number" style={timeStyle} defaultValue={0} />
-      <button onClick={handleStart} type="button">
+    <>
+      <label className={styles.label} htmlFor="time">
+        Set time in seconds
+      </label>
+      <input
+        ref={inputRef}
+        type="number"
+        id="time"
+        className={styles.timeInput}
+        defaultValue={0}
+      />
+      <button onClick={handleStart} type="button" className={styles.button}>
         Start
       </button>
-      <div style={displayStyle}>{count}</div>
-    </div>
+      <div className={styles.display}>{count}</div>
+    </>
   );
 };
 

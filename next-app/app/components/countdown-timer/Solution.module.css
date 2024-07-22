@@ -1,4 +1,4 @@
-export const solutionCss = `.timeInput,
+.timeInput,
 .button,
 .display {
   padding: 10px;
@@ -25,4 +25,3 @@ export const solutionCss = `.timeInput,
   width: 60px;
   border: 1px solid gray;
 }
-`;
