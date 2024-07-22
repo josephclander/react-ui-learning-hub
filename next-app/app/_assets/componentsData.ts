@@ -13,7 +13,7 @@ export const componentsData = {
     title: "Accordion",
     details:
       "Build an accordion/dropdown where sections expand or collapse when their headers are clicked.",
-    complete: false,
+    complete: true,
   },
   "autocomplete-text-input": {
     id: 2,
