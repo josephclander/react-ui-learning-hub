@@ -5,11 +5,9 @@ const Hero = () => {
   return (
     <div className={styles.container}>
       <p className={styles.tagline}>
+        <div className="bold">Explore beyond the code</div>
         <span className={styles.line}>
-          Don&apos;t just <span className="bold">copy</span> components,{" "}
-        </span>
-        <span className={styles.line}>
-          Learn <span className="bold">how</span> you can develop your own.
+          Master the creation of your own React components.
         </span>
       </p>
     </div>

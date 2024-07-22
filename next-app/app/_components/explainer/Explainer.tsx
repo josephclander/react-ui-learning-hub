@@ -9,18 +9,24 @@ const Explainer = () => {
     <div className={styles.Root__text_container}>
       <div className={styles.Blurb_1_container}>
         <NoCopyLogo width="200px" />
-        <p className={styles.Root__blurb_1}>
-          This isn&apos;t a library of components to just <em>copy-paste</em>. This
-          library shows you the key to <span className="bold">how</span> it was
-          implemented.
-        </p>
+        <div className={styles.Root__blurb_1}>
+          <h3>Unlock the Mechanics Behind Each Component</h3>
+          <p>
+            Dive deeper than ever before—this isn&apos;t just about copying and
+            pasting code. Our resources guide you through the why and the how
+            behind each component, empowering you to build with insight.
+          </p>
+        </div>
       </div>
       <div className={styles.Blurb_2_container}>
-        <p className={styles.Root__blurb_2}>
-          Browse the library of common React UI components to see example code
-          with an <span className="bold">explanation</span> on the key to making
-          it work.
-        </p>
+        <div className={styles.Root__blurb_2}>
+          <h3>Explore Our Interactive Component Library</h3>
+          <p>
+            Navigate through a curated collection of common React UI components.
+            Each example is paired with thorough explanations, unlocking the
+            secrets to effective implementation.
+          </p>
+        </div>
         <OpenBookLogo width="220px" />
       </div>
     </div>
