@@ -53,7 +53,7 @@ export const componentsData = {
     title: "Clipboard Copy",
     details:
       "Create a component with a text box and a button that copies the text in the box to the clipboard when clicked.",
-    complete: false,
+    complete: true,
   },
   "collapsible-side-menu": {
     id: 7,
