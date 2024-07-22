@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div className={styles.footer}>
       <Logo width="150px" />
-      <h2>HOW TO: React UI</h2>
+      <h2>React UI Learning Hub</h2>
     </div>
   );
 };

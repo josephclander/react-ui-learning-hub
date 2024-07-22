@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title:
-    "HOW TO: React UI - A library designed to show you HOW to build React components.",
+    "React UI Learning Hub - A library designed to show you HOW to build React components.",
   description:
     "A React component library focused on showing you how to build them.",
 };
