@@ -37,7 +37,7 @@ export const componentsData = {
     title: "Carousel",
     details:
       "Implement a basic image carousel with 'next' and 'previous' buttons to cycle through images.",
-    complete: false,
+    complete: true,
   },
   "chat-bubble-ui": {
     id: 5,
