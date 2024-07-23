@@ -6,4 +6,23 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 30px;
+}
+
+.siteLogo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.name {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.socialLogos {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
