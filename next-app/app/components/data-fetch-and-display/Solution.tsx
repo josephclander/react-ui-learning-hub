@@ -20,16 +20,24 @@ type APIResponse = {
 };
 
 // function
-const Solution: React.FC = () => {
+const Solution = () => {
   const { users, isLoading, error } = useFetchUsers();
 
   return (
     <div>
       <h2>Data</h2>
+      <p>
+        The following data is sourced from{" "}
+        <a href="https://randomuser.me">Random User Generator</a>.
+      </p>
+      <p>Refresh the page to see the loading animation.</p>
+
       {isLoading && <p>Loading...</p>}
       {error && <p>Error: {error}</p>}
 
-      {users && users.map((user) => <User key={user.email} {...user} />)}
+      <ul>
+        {users && users.map((user) => <User key={user.email} {...user} />)}
+      </ul>
     </div>
   );
 };
@@ -37,13 +45,13 @@ const Solution: React.FC = () => {
 export default Solution;
 
 // display user
-function User(user: userProps) {
+const User = (user: userProps) => {
   return (
-    <div>
+    <li>
       {user?.name?.title} {user?.name?.first} {user?.name?.last}
-    </div>
+    </li>
   );
-}
+};
 
 // fetch data
 const fetchUserData = async (): Promise<allUserProps> => {
@@ -65,7 +73,6 @@ function useFetchUsers() {
     const fetchData = async () => {
       try {
         const results = await fetchUserData();
-        // data.results = [];
         if (results.length > 0) {
           setUsers(results);
           setError(null);

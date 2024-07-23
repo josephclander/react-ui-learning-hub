@@ -93,7 +93,7 @@ export const componentsData = {
     title: "Data Fetch and Display",
     details:
       "Make a component that fetches data from a public API and displays it in a list or table format.",
-    complete: false,
+    complete: true,
   },
   "drag-and-drop-interface": {
     id: 12,

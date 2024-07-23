@@ -1,1 +1,1 @@
-export const solutionCss = `CSS HERE`;
+export const solutionCss = `// None`;
