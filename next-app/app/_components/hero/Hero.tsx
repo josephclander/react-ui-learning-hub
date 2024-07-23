@@ -10,6 +10,12 @@ const Hero = () => {
           Master the creation of your own React components.
         </span>
       </p>
+      <div className={styles.buttonContainer}>
+        <h2>Take me to the code</h2>
+        <a href="#list" className={styles.anchor}>
+          &#8595;
+        </a>
+      </div>
     </div>
   );
 };

@@ -11,7 +11,9 @@ interface ListProps {
 const List = ({ componentsData }: ListProps) => {
   return (
     <>
-      <h2 className={styles.title}>The Components</h2>
+      <h2 id="list" className={styles.title}>
+        The Components
+      </h2>
       <ul className={styles.list}>
         {componentsData &&
           Object.values(componentsData).map((component: ComponentProps) => {

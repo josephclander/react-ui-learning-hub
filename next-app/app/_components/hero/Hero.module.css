@@ -1,7 +1,9 @@
 .container {
-  height: 300px;
-  padding: 10px;
+  height: max(80%, 300px);
+  padding: 30px 10px;
   display: flex;
+  flex-direction: column;
+  gap: 60px;
   justify-content: center;
   align-items: center;
   background-image: url("../../_assets/jigsaw_tile2.png"),
@@ -25,4 +27,30 @@
   padding: 15px;
   background: white;
   text-align: center;
+}
+
+.buttonContainer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.anchor {
+  display: block;
+  width: fit-content;
+  font-weight: bold;
+  background-color: white;
+  padding: 10px;
+  border: 3px solid black;
+  border-radius: 5px;
+  margin: 10px 0 30px;
+  transform: scale(1);
+  transition: all 0.3s;
+}
+
+.anchor:hover {
+  color: white;
+  background-color: black;
+  transform: scale(1.25);
 }
