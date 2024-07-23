@@ -1,4 +1,4 @@
-.Root__text_container {
+.explanation {
   display: flex;
   flex-direction: column;
   margin: 30px 0;
@@ -6,36 +6,44 @@
   gap: 60px;
   justify-content: center;
   align-items: center;
-  /* border: 3px solid black; */
   border-radius: 5px;
-  background-image: url("../../_assets/jigsaw_piece.svg"),
-    linear-gradient(
-      127deg,
-      rgba(191, 230, 208, 1) 0%,
-      rgba(191, 230, 208, 1) 100%
-    );
+  background-image: url("../../_assets/jigsaw_piece.svg"), linear-gradient(
+    127deg,
+    #7b8cde 0%,
+    #7b8cde 100%
+  );
   background-repeat: repeat;
-  background-position: -100px -100px;
-  background-size: 400px;
+  background-position: -100px -50px;
+  background-size: 180px;
   min-height: 500px;
+}
+
+.textContainer {
+  max-width: 800px;
+  display: flex;
+  gap: 40px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .Blurb_1_container,
 .Blurb_2_container {
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 20px;
-  max-width: 800px;
   border: 3px solid rgb(10, 10, 10);
   padding: 30px;
   border-radius: 5px;
   background-color: white;
 }
 
-.Root__blurb_1,
-.Root__blurb_2 {
-    max-width: 300px;
+.blurb_1,
+.blurb_2 {
+  max-width: 300px;
 }
