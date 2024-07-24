@@ -15,7 +15,9 @@ const Hero = () => {
         </p>
       </div>
 
-      <HeroLogo width={"700px"} />
+      <div className={styles.HeroImageContainer}>
+        <HeroLogo />
+      </div>
 
       <div className={styles.buttonContainer}>
         <a href="#list" className={styles.anchor}>

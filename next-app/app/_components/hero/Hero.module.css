@@ -1,10 +1,10 @@
 .container {
-  height: max(80svh, 300px);
+  height: max(80svh, 900px);
   padding: 30px 10px;
   display: flex;
   flex-direction: column;
-  gap: 60px;
-  justify-content: center;
+  gap: 20px;
+  justify-content: start;
   align-items: center;
   background-image: url("../../_assets/jigsaw_tile2.png"),
     linear-gradient(
@@ -26,6 +26,12 @@
   border-radius: 5px;
   padding: 15px;
   background: white;
+}
+
+.HeroImageContainer {
+  width: 100%;
+  max-width: 700px;
+  min-width: 300px;
 }
 
 .buttonContainer {
