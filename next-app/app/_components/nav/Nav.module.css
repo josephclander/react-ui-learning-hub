@@ -12,3 +12,8 @@
 .Nav__Link:hover {
   scale: 1.05;
 }
+
+.brandName {
+  font-size: 1.5rem;
+  font-weight: bold;
+}

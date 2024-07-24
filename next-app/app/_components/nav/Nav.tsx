@@ -7,7 +7,7 @@ const Nav = () => {
     <nav>
       <Link className={styles.Nav__Link} href="/">
         <Logo width={"40px"} />
-        <h1>React UI Learning Hub</h1>
+        <div className={styles.brandName}>React UI Learning Hub</div>
       </Link>
     </nav>
   );
