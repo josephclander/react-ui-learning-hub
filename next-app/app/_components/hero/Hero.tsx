@@ -1,4 +1,5 @@
 // file: next-app/app/_components/hero/Hero.tsx
+import HeroLogo from "@/app/_assets/HeroLogo";
 import styles from "./Hero.module.css";
 
 const Hero = () => {
@@ -13,6 +14,8 @@ const Hero = () => {
           forms with interactive code examples.
         </p>
       </div>
+
+      <HeroLogo width={"700px"} />
 
       <div className={styles.buttonContainer}>
         <a href="#list" className={styles.anchor}>
