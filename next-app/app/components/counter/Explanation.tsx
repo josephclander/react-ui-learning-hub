@@ -1,6 +1,7 @@
 const Explanation = () => {
   return (
     <>
+    <h3>The code</h3>
       <p>
         It&apos;s clear that you&apos;ll need to keep track of the count with
         the <code className="code">useState</code> hook. Using the{" "}
@@ -9,6 +10,7 @@ const Explanation = () => {
         <code className="code">handleAdd</code> and{" "}
         <code className="code">handleMinus</code> to keep the code clean.
       </p>
+      <h3>Top tip</h3>
       <p>
         To make sure your counter component doesn&apos;t run into any conflicts
         of state, you need to write your handlers using a functional update
