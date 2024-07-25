@@ -1,16 +1,21 @@
 const Explanation = () => {
   return (
     <>
+      <h3>Overview</h3>
       <p>
         <code className="code">setInterval</code> is the basis of how you create
         a timer. But the trick comes from knowing how to interact with it and to
         clean it up correctly to avoid adverse behavior.
       </p>
+      <h3>useRef rather than useState</h3>
       <p>
         To keep track of the timer we need to store it in a{" "}
         <code className="code">useRef</code>. Now we are confident that when the
-        page rerenders we don&apos;t lose access to this reference.
+        page rerenders we don&apos;t lose access to this reference. This is an
+        appropriate use case for storing data in a reference that you can look
+        up than with constant monitoring that you get with state.
       </p>
+      <h3>User interaction</h3>
       <p>
         For the user to interact with the timer you need 3 buttons and 3
         functions: <code className="code">handleStart</code>,{" "}
@@ -18,6 +23,7 @@ const Explanation = () => {
         <code className="code">handleReset</code>. The functions for each of
         these are very simple to update the status of the timer.
       </p>
+      <h3>How to use useEffect</h3>
       <p>
         However, logically you will handle the timer with the use of{" "}
         <code className="code">status</code> and{" "}
@@ -40,6 +46,7 @@ const Explanation = () => {
         <code className="code">setInterval</code> reference. This is why it was
         key to have this stored in a reference.
       </p>
+      <h3>Keep it clean with useEffect cleanup function</h3>
       <p>
         Note that in <code className="code">useEffect</code> there is a return
         statement. This is standard practice to{" "}
