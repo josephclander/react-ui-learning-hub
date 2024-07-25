@@ -11,6 +11,9 @@ export const metadata: Metadata = {
     "React UI Learning Hub - A library designed to show you HOW to build React components.",
   description:
     "A React component library focused on showing you how to build them.",
+  verification: {
+    google: "nFdfQzSNvFL_R09YKmsB9iSZYxb5K2w-u-2Zj65wKY0",
+  },
 };
 
 export default function RootLayout({
