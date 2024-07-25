@@ -4,7 +4,12 @@ import Solution from "./Solution";
 import CodeStyling from "../../_components/codeStyling/CodeStyling";
 import Explanation from "./Explanation";
 import { solutionCode } from "./solutionCode";
-import { solutionCss } from "./solutionCss";
+import { solutionCss } from "./solutionCss";import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: `${info.title}`,
+  description: `${info.details}`,
+};
 
 const Component = () => {
   return (

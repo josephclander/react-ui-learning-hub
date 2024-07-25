@@ -7,8 +7,10 @@ import Footer from "./_components/footer/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title:
-    "React UI Learning Hub - A library designed to show you HOW to build React components.",
+  title: {
+    template: "%s component - React UI Learning Hub",
+    default: "React UI Learning Hub - Learn HOW to build React components.",
+  },
   description:
     "A React component library focused on showing you how to build them.",
   verification: {
