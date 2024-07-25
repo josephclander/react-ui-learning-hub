@@ -16,6 +16,10 @@ export const metadata: Metadata = {
   verification: {
     google: "nFdfQzSNvFL_R09YKmsB9iSZYxb5K2w-u-2Zj65wKY0",
   },
+  metadataBase: new URL("https://react-ui-learning-hub.vercel.app/"),
+  openGraph: {
+    images: "./opengraph-image.png",
+  },
 };
 
 export default function RootLayout({
