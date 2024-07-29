@@ -4,7 +4,7 @@ import { componentsData, ComponentProps } from "./_assets/componentsData";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const URL =
-    process.env.SITE_URL || "https://react-ui-learning-hub.vercel.app/";
+    process.env.SITE_URL || "https://react-ui-learning-hub.vercel.app";
 
   type ChangeFrequency =
     | "always"
