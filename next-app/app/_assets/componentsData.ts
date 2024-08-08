@@ -4,6 +4,8 @@ export type ComponentProps = {
   title: string;
   details: string;
   complete: boolean;
+  explanation: boolean;
+  video: boolean;
 };
 
 export const componentsData = {
@@ -14,6 +16,8 @@ export const componentsData = {
     details:
       "Build an accordion/dropdown where sections expand or collapse when their headers are clicked.",
     complete: true,
+    explanation: true,
+    video: false,
   },
   "autocomplete-text-input": {
     id: 2,
@@ -22,6 +26,8 @@ export const componentsData = {
     details:
       "Develop a text input that suggests possible completions as the user types, pulling from a predefined list of options.",
     complete: false,
+    explanation: false,
+    video: false,
   },
   "calendar-picker": {
     id: 3,
@@ -30,6 +36,8 @@ export const componentsData = {
     details:
       "Create a date picker that users can use to select a date from a simple calendar view.",
     complete: false,
+    explanation: false,
+    video: false,
   },
   carousel: {
     id: 4,
@@ -38,6 +46,8 @@ export const componentsData = {
     details:
       "Implement a basic image carousel with 'next' and 'previous' buttons to cycle through images.",
     complete: true,
+    explanation: true,
+    video: false,
   },
   "chat-bubble-ui": {
     id: 5,
@@ -46,6 +56,8 @@ export const componentsData = {
     details:
       "Build a chat bubble interface where messages can be typed into a text box and submitted to appear as chat bubbles.",
     complete: false,
+    explanation: false,
+    video: false,
   },
   "clipboard-copy": {
     id: 6,
@@ -54,6 +66,8 @@ export const componentsData = {
     details:
       "Create a component with a text box and a button that copies the text in the box to the clipboard when clicked.",
     complete: true,
+    explanation: true,
+    video: false,
   },
   "collapsible-side-menu": {
     id: 7,
@@ -62,6 +76,8 @@ export const componentsData = {
     details:
       "Build a side menu that can be toggled to expand or collapse when clicking a menu icon.",
     complete: false,
+    explanation: false,
+    video: false,
   },
   counter: {
     id: 8,
@@ -70,6 +86,8 @@ export const componentsData = {
     details:
       "Create a component that shows a number (starts from 0). Add two buttons to increment and decrement the counter.",
     complete: true,
+    explanation: true,
+    video: false,
   },
   "countdown-timer": {
     id: 9,
@@ -78,6 +96,8 @@ export const componentsData = {
     details:
       "Create a countdown timer where users can set a duration, and it counts down to zero with updates displayed visually.",
     complete: true,
+    explanation: true,
+    video: false,
   },
   "currency-converter": {
     id: 10,
@@ -86,6 +106,8 @@ export const componentsData = {
     details:
       "Build a small interface to convert amounts from one currency to another using static exchange rates.",
     complete: true,
+    explanation: true,
+    video: false,
   },
   "data-fetch-and-display": {
     id: 11,
@@ -94,6 +116,8 @@ export const componentsData = {
     details:
       "Make a component that fetches data from a public API and displays it in a list or table format.",
     complete: true,
+    explanation: true,
+    video: false,
   },
   "drag-and-drop-interface": {
     id: 12,
@@ -101,7 +125,9 @@ export const componentsData = {
     title: "Drag and Drop Interface",
     details:
       "Implement a basic drag and drop interface where users can move items between different containers.",
-    complete: false,
+    complete: true,
+    explanation: false,
+    video: false,
   },
   "dynamic-form-builder": {
     id: 13,
@@ -109,7 +135,9 @@ export const componentsData = {
     title: "Dynamic Form Builder",
     details:
       "Build a form where users can dynamically add or remove input fields (like text boxes or dropdowns).",
-    complete: false,
+    complete: true,
+    explanation: true,
+    video: false,
   },
   "image-zoom-viewer": {
     id: 14,
@@ -117,7 +145,9 @@ export const componentsData = {
     title: "Image Zoom Viewer",
     details:
       "Create a component that allows users to hover over an image to view a magnified version of the part their cursor is over.",
-    complete: false,
+    complete: true,
+    explanation: false,
+    video: false,
   },
   modal: {
     id: 15,
@@ -125,7 +155,9 @@ export const componentsData = {
     title: "Modal",
     details:
       "Implement a modal window that opens with a button click and can be closed with a close button or by clicking outside the modal.",
-    complete: false,
+    complete: true,
+    explanation: false,
+    video: false,
   },
   "multi-select-dropdown": {
     id: 16,
@@ -134,6 +166,8 @@ export const componentsData = {
     details:
       "Create a dropdown where users can select multiple options either by clicking or typing.",
     complete: false,
+    explanation: false,
+    video: false,
   },
   "notification-bell": {
     id: 17,
@@ -142,6 +176,8 @@ export const componentsData = {
     details:
       "Implement a bell icon that shows a red notification badge; clicking on the bell shows a dropdown with messages.",
     complete: false,
+    explanation: false,
+    video: false,
   },
   pagination: {
     id: 18,
@@ -149,7 +185,9 @@ export const componentsData = {
     title: "Pagination",
     details:
       "Build a component that shows numbered pages and allows users to click through pages of data (data can be static).",
-    complete: false,
+    complete: true,
+    explanation: false,
+    video: false,
   },
   "password-visibility-toggle": {
     id: 19,
@@ -157,7 +195,9 @@ export const componentsData = {
     title: "Password Visibility Toggle",
     details:
       "Create a password input field with a toggle button that shows or hides the password.",
-    complete: false,
+    complete: true,
+    explanation: false,
+    video: false,
   },
   "progress-bar": {
     id: 20,
@@ -165,7 +205,9 @@ export const componentsData = {
     title: "Progress Bar",
     details:
       "Implement a progress bar that updates based on a value input by the user.",
-    complete: false,
+    complete: true,
+    explanation: false,
+    video: false,
   },
   "range-slider": {
     id: 21,
@@ -174,6 +216,8 @@ export const componentsData = {
     details:
       "Develop a range slider component for selecting a value within a specified range.",
     complete: false,
+    explanation: false,
+    video: false,
   },
   "search-filter-for-list": {
     id: 22,
@@ -181,7 +225,9 @@ export const componentsData = {
     title: "Search Filter for List",
     details:
       "Develop a component that filters items in a list based on a text input search query.",
-    complete: false,
+    complete: true,
+    explanation: false,
+    video: false,
   },
   "simple-blog-post-editor": {
     id: 23,
@@ -189,7 +235,9 @@ export const componentsData = {
     title: "Simple Blog Post Editor",
     details:
       "Create a text input area where users can enter a title and content for a blog post, and submit it with a button.",
-    complete: false,
+    complete: true,
+    explanation: false,
+    video: false,
   },
   "star-rating": {
     id: 24,
@@ -197,7 +245,9 @@ export const componentsData = {
     title: "Star Rating",
     details:
       "Develop a star rating component where users can set a rating by clicking on stars.",
-    complete: false,
+    complete: true,
+    explanation: false,
+    video: false,
   },
   "tab-selector": {
     id: 25,
@@ -205,7 +255,9 @@ export const componentsData = {
     title: "Tab Selector",
     details:
       "Create a component with multiple tabs for users to click through. Display different content as each tab is selected.",
-    complete: false,
+    complete: true,
+    explanation: false,
+    video: false,
   },
   "theme-switcher": {
     id: 26,
@@ -213,7 +265,9 @@ export const componentsData = {
     title: "Theme Switcher",
     details:
       "Build a toggle that switches the color scheme of the page between light and dark modes.",
-    complete: false,
+    complete: true,
+    explanation: false,
+    video: false,
   },
   timer: {
     id: 27,
@@ -222,6 +276,8 @@ export const componentsData = {
     details:
       "Develop a timer where users can start, stop, and reset. Display the time in a digital format.",
     complete: true,
+    explanation: true,
+    video: false,
   },
   "todo-list": {
     id: 28,
@@ -230,6 +286,8 @@ export const componentsData = {
     details:
       "Develop a simple todo list where users can add items to a list using a text input and a button. Items should also be removable.",
     complete: true,
+    explanation: true,
+    video: false,
   },
   "tooltips-on-hover": {
     id: 29,
@@ -237,7 +295,9 @@ export const componentsData = {
     title: "Tooltips on Hover",
     details:
       "Implement tooltips that appear when hovering over different elements, providing additional information.",
-    complete: false,
+    complete: true,
+    explanation: false,
+    video: false,
   },
   "weather-display-widget": {
     id: 30,
@@ -246,5 +306,7 @@ export const componentsData = {
     details:
       "Create a component that displays the weather (e.g. sunny, rainy) based on a predefined location. Allow users to change the location from a dropdown.",
     complete: true,
+    explanation: true,
+    video: false,
   },
 };

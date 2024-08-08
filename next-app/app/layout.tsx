@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    template: "%s component - React UI Learning Hub",
+    template: "%s Component - React UI Learning Hub",
     default: "React UI Learning Hub - Learn HOW to build React components.",
   },
   description:
