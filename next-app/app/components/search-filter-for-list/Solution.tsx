@@ -1,6 +1,7 @@
 "use client";
 
 import { CSSProperties, useState } from "react";
+import styles from "./Solution.module.css";
 
 const londonBoroughs = [
   "City of London",
@@ -38,24 +39,6 @@ const londonBoroughs = [
   "Westminster",
 ];
 
-const inputStyle: CSSProperties = {
-  padding: "5px",
-  margin: "30px 0",
-};
-
-const listStyle: CSSProperties = {
-  display: "flex",
-  flexWrap: "wrap",
-  width: "500px",
-  gap: "5px",
-};
-
-const liStyle: CSSProperties = {
-  padding: "3px",
-  border: "1px solid grey",
-  borderRadius: "5px",
-};
-
 const Solution = () => {
   const [filteredList, setFilteredList] = useState<string[]>(londonBoroughs);
 
@@ -75,10 +58,10 @@ const Solution = () => {
   return (
     <div>
       <h2>Type your local borough</h2>
-      <input onChange={handleInput} type="text" style={inputStyle} />
-      <ul style={listStyle}>
+      <input onChange={handleInput} type="text" className={styles.input} />
+      <ul className={styles.list}>
         {filteredList.map((boro) => (
-          <li style={liStyle} key={boro}>
+          <li className={styles.li} key={boro}>
             {boro}
           </li>
         ))}
@@ -90,9 +73,6 @@ const Solution = () => {
 export default Solution;
 
 // debounce function
-// required to get type definitions from chatGPT!
-// first iteration was too generic and not at all readable
-// forced types for args for readability
 function debounceSetList(
   // callback here is referencing setFilteredList
   // takes a string array and returns nothing
