@@ -1,4 +1,4 @@
-export const solutionCss = `.input {
+.input {
   padding: 5px;
   margin: 50px 0 20px;
 }
@@ -27,4 +27,3 @@ export const solutionCss = `.input {
 .completeMsg {
   color: red;
 }
-`;
