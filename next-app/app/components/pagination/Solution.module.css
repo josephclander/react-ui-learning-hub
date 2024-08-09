@@ -1,4 +1,4 @@
-export const solutionCss = `.button {
+.button {
   border: 1px solid black;
   border-radius: 5px;
   padding: 5px;
@@ -15,4 +15,3 @@ export const solutionCss = `.button {
 .listItem {
   margin-bottom: 10px;
 }
-`;
