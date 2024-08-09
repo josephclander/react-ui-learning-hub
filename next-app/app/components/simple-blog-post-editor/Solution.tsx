@@ -1,27 +1,7 @@
 "use client";
 
-import { CSSProperties, ChangeEvent, FormEvent, useState } from "react";
-
-const containerStyle: CSSProperties = {
-  display: "flex",
-  flexDirection: "column",
-  maxWidth: "350px",
-  border: "1px solid black",
-  padding: "15px",
-  gap: "15px",
-};
-const labelStyle: CSSProperties = {
-  display: "block",
-};
-
-const inputStyle: CSSProperties = {
-  padding: "5px",
-};
-
-const buttonStyle: CSSProperties = {
-  padding: "5px",
-  cursor: "pointer",
-};
+import { ChangeEvent, FormEvent, useState } from "react";
+import styles from "./Solution.module.css";
 
 const Solution = () => {
   const [title, setTitle] = useState<string>("");
@@ -38,26 +18,26 @@ const Solution = () => {
   function handleSubmit(event: FormEvent<HTMLFormElement>): void {
     event.preventDefault();
 
-    console.log({ title, content });
+    alert(`Title: ${title}, \nContent: ${content}`);
     setTitle("");
     setContent("");
   }
 
   return (
-    <form onSubmit={handleSubmit} style={containerStyle}>
-      <label style={labelStyle} htmlFor="title">
+    <form onSubmit={handleSubmit} className={styles.container}>
+      <label className={styles.label} htmlFor="title">
         Title
       </label>
       <input
         required
         onChange={handleTitle}
         value={title}
-        style={inputStyle}
+        className={styles.input}
         type="text"
         name="title"
         id="title"
       />
-      <label style={labelStyle} htmlFor="content">
+      <label className={styles.label} htmlFor="content">
         Content
       </label>
       <textarea
@@ -65,13 +45,13 @@ const Solution = () => {
         onChange={handleContent}
         value={content}
         rows={5}
-        style={inputStyle}
+        className={styles.input}
         name="content"
         id="content"
       />
       <input
         aria-label="Submit post"
-        style={buttonStyle}
+        className={styles.button}
         type="submit"
         value="Post"
       />

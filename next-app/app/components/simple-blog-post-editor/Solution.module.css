@@ -1,4 +1,4 @@
-export const solutionCss = `.container {
+.container {
   display: flex;
   flex-direction: column;
   max-width: 350px;
@@ -19,4 +19,3 @@ export const solutionCss = `.container {
   padding: 5px;
   cursor: pointer;
 }
-`;
