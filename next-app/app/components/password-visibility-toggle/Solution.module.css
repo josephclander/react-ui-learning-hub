@@ -1,4 +1,4 @@
-export const solutionCss = `.label {
+.label {
   display: block;
   margin-bottom: 10px;
 }
@@ -10,4 +10,3 @@ export const solutionCss = `.label {
   border: 2px solid black;
   cursor: pointer;
 }
-`;

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import styles from "./Solution.module.css";
 
 const Solution = () => {
   const [pwd, setPwd] = useState("");
@@ -15,22 +16,22 @@ const Solution = () => {
   };
 
   return (
-    <div>
-      <label htmlFor="password">Enter Password</label>
-      <br />
+    <>
+      <label className={styles.label} htmlFor="password">
+        Enter Password
+      </label>
       <input
+        className={styles.input}
         onChange={handleInput}
         value={pwd}
         type={visible ? "text" : "password"}
         id="password"
         name="pwd"
       />{" "}
-      <button onClick={toggleVisibility}>
+      <button className={styles.button} onClick={toggleVisibility}>
         {visible ? "Hide Password" : "Show Password"}
       </button>
-      <br />
-      <br />
-    </div>
+    </>
   );
 };
 
