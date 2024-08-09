@@ -126,7 +126,7 @@ export const componentsData = {
     details:
       "Implement a basic drag and drop interface where users can move items between different containers.",
     complete: true,
-    explanation: false,
+    explanation: true,
     video: false,
   },
   "dynamic-form-builder": {

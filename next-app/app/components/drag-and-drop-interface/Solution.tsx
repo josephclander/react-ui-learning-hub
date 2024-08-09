@@ -69,18 +69,6 @@ const Solution = () => {
           ref={dropZone2}
         ></div>
       </div>
-      <div>
-        <p>
-          The solution mimics the pattern for vanilla JavaScript as you can see
-          in this{" "}
-          <a href="https://www.w3schools.com/html/html5_draganddrop.asp">
-            example
-          </a>
-          with the exception that it uses state and refs to keep track of the
-          elements. Note the property types on each of the elements; draggable,
-          onDragStart, onDrop and onDragOver.
-        </p>
-      </div>
     </>
   );
 };
