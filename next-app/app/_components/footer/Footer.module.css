@@ -24,5 +24,14 @@
 .socialLogos {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
+}
+
+.Home__Link {
+  scale: 1;
+  transition: scale 0.3s;
+}
+
+.Home__Link:hover {
+  scale: 1.05;
 }
