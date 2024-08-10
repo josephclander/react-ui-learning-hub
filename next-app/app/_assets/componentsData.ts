@@ -146,7 +146,7 @@ export const componentsData = {
     details:
       "Create a component that allows users to hover over an image to view a magnified version of the part their cursor is over.",
     complete: true,
-    explanation: false,
+    explanation: true,
     video: false,
   },
   modal: {
