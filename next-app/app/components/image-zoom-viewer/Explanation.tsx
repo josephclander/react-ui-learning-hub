@@ -36,7 +36,7 @@ const Explanation = () => {
         position too. Otherwise it could use the{" "}
         <code className="code">body</code> tag.
       </p>
-      <h3>Creating the 'Zoom' effect</h3>
+      <h3>Creating the &apos;Zoom&apos; effect</h3>
       <p>
         The principle behind this code is adding a zoom when the element is
         hovered over.
