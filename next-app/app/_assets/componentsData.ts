@@ -156,7 +156,7 @@ export const componentsData = {
     details:
       "Implement a modal window that opens with a button click and can be closed with a close button or by clicking outside the modal.",
     complete: true,
-    explanation: false,
+    explanation: true,
     video: false,
   },
   "multi-select-dropdown": {
