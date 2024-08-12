@@ -196,7 +196,7 @@ export const componentsData = {
     details:
       "Create a password input field with a toggle button that shows or hides the password.",
     complete: true,
-    explanation: false,
+    explanation: true,
     video: false,
   },
   "progress-bar": {
