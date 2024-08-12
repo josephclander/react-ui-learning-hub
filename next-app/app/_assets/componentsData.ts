@@ -206,7 +206,7 @@ export const componentsData = {
     details:
       "Implement a progress bar that updates based on a value input by the user.",
     complete: true,
-    explanation: false,
+    explanation: true,
     video: false,
   },
   "range-slider": {
