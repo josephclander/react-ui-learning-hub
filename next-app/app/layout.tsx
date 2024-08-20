@@ -20,6 +20,30 @@ export const metadata: Metadata = {
   openGraph: {
     images: "./opengraph-image.png",
   },
+  themeColor: "#7b8cde",
+  applicationName: "React UI Learning Hub",
+  keywords: [
+    "React UI components",
+    "Learn React components",
+    "React tutorial",
+    "React component tutorials",
+    "Build React UI",
+    "React component step-by-step guides",
+    "Interactive React examples",
+    "React code examples",
+    "React UI library",
+    "How to build React components",
+    "React educational resources",
+    "React lists tutorial",
+    "React forms tutorial",
+    "Essential React UI elements",
+    "React UI learning hub",
+  ],
+  creator: "Joseph Lander",
+  authors: {
+    name: "Joseph Lander",
+    url: "https://www.linkedin.com/in/josephclander/",
+  },
 };
 
 export default function RootLayout({
