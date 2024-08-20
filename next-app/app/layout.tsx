@@ -15,6 +15,9 @@ export const metadata: Metadata = {
     template: "%s Component - React UI Learning Hub",
     default: "React UI Learning Hub - Learn HOW to build React components.",
   },
+  alternates: {
+    canonical: "/",
+  },
   description:
     "A React component library focused on showing you how to build them.",
   verification: {
