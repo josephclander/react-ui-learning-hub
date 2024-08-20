@@ -10,6 +10,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: `${info.title}`,
   description: `${info.details}`,
+  alternates: {
+    canonical: `${info.canonical}`,
+  },
 };
 
 const Component = () => {
