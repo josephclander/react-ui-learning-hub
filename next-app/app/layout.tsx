@@ -1,10 +1,14 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Nav from "./_components/nav/Nav";
 import Footer from "./_components/footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
+
+export const viewport: Viewport = {
+  themeColor: "#7b8cde",
+};
 
 export const metadata: Metadata = {
   title: {
@@ -20,7 +24,6 @@ export const metadata: Metadata = {
   openGraph: {
     images: "./opengraph-image.png",
   },
-  themeColor: "#7b8cde",
   applicationName: "React UI Learning Hub",
   keywords: [
     "React UI components",
@@ -38,7 +41,7 @@ export const metadata: Metadata = {
     "React forms tutorial",
     "Essential React UI elements",
     "React UI learning hub",
-  ],
+  ].join(","),
   creator: "Joseph Lander",
   authors: {
     name: "Joseph Lander",
