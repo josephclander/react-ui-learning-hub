@@ -6,10 +6,14 @@ import Explanation from "./Explanation";
 import { solutionCode } from "./solutionCode";
 import { solutionCss } from "./solutionCss";
 import { Metadata } from "next";
+import titleToKebabCase from "../../utils/kebab-case";
 
 export const metadata: Metadata = {
   title: `${info.title}`,
   description: `${info.details}`,
+  alternates: {
+    canonical: `/components/${titleToKebabCase(info.title)}`,
+  },
 };
 
 const Component = () => {
