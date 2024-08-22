@@ -30,6 +30,26 @@
   border-radius: var(--border-radius);
 }
 
+.Component__VideoContainer {
+  width: 100%;
+  max-width: 600px; /* same as the max-width of the Component */
+  max-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.Component__Video {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 540 / 960; /* Maintain the aspect ratio */
+  max-width: 100%; /* Ensures the video does not exceed the width of its container */
+  max-height: 90vh;
+  border: 3px solid black;
+  border-radius: var(--border-radius);
+}
+
 .Component__HeadingContainer,
 .Component__ExplanationContainer {
   background-color: white;
