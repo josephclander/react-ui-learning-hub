@@ -35,3 +35,39 @@
 .Home__Link:hover {
   scale: 1.05;
 }
+
+/* w-full max-w-2xl mx-auto p-10 flex flex-col */
+.container {
+  width: 100%;
+  max-width: 672px;
+  padding: 20px 0 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.link_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 576px;
+}
+
+.element_container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 45%;
+}
+
+.element_title {
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.element_link {
+  transition: color 0.3s;
+}
+
+.element_link:hover {
+  color: #7b8ade;
+}
