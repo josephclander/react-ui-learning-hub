@@ -3,6 +3,10 @@
 import Link from "next/link";
 import { ComponentProps } from "../../_assets/componentsData";
 import styles from "./ComponentItem.module.css";
+import CheckIcon from "@/app/_assets/CheckIcon";
+import NoteIcon from "@/app/_assets/NoteIcon";
+import VideoIcon from "@/app/_assets/VideoIcon";
+import BuildIcon from "@/app/_assets/BuildIcon";
 
 const ComponentItem = (component: ComponentProps) => {
   // highlight completed items
@@ -14,19 +18,26 @@ const ComponentItem = (component: ComponentProps) => {
     <Link href={`/components/${component.slug}`}>
       <li style={conditionalStyle} className={`${styles.listItem} `}>
         <div>
-          <h3>
-            {component.title} {component.complete ? "" : "🚧"}
-          </h3>
+          <h3>{component.title}</h3>
           <p>{component.details}</p>
         </div>
         <div className={styles.tags}>
+          {!component.complete && (
+            <div
+              aria-label="Is being built"
+              title="Is being built"
+              className={styles.tag}
+            >
+              <BuildIcon width={"30px"} />
+            </div>
+          )}
           {component.complete && (
             <div
               aria-label="Is complete"
               title="Is complete"
               className={styles.tag}
             >
-              ✅
+              <CheckIcon width={"30px"} />
             </div>
           )}
           {component.explanation && (
@@ -35,7 +46,7 @@ const ComponentItem = (component: ComponentProps) => {
               title="Has code explanation"
               className={styles.tag}
             >
-              📝
+              <NoteIcon width={"30px"} />
             </div>
           )}
           {component.video && (
@@ -44,7 +55,7 @@ const ComponentItem = (component: ComponentProps) => {
               title="Has a video explanation"
               className={styles.tag}
             >
-              🎬
+              <VideoIcon width={"30px"} />
             </div>
           )}
         </div>
