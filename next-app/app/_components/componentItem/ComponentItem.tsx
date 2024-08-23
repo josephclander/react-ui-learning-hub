@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { ComponentProps } from "../../_assets/componentsData";
 import styles from "./ComponentItem.module.css";
-import CheckIcon from "@/app/_assets/CheckIcon";
+import CursorIcon from "@/app/_assets/CursorIcon";
 import NoteIcon from "@/app/_assets/NoteIcon";
 import VideoIcon from "@/app/_assets/VideoIcon";
 import BuildIcon from "@/app/_assets/BuildIcon";
@@ -33,11 +33,11 @@ const ComponentItem = (component: ComponentProps) => {
           )}
           {component.complete && (
             <div
-              aria-label="Is complete"
-              title="Is complete"
+              aria-label="Interactive"
+              title="Interactive"
               className={styles.tag}
             >
-              <CheckIcon width={"30px"} />
+              <CursorIcon width={"30px"} />
             </div>
           )}
           {component.explanation && (
