@@ -1,5 +1,6 @@
 export const solutionCss = `.list1 {
-  border: 2px solid red;
+  border: 2px solid black;
+  border-radius: 5px;
   padding: 1rem;
   display: flex;
   gap: 1rem;
@@ -8,7 +9,8 @@ export const solutionCss = `.list1 {
 }
 
 .list2 {
-  border: 2px solid red;
+  border: 2px solid black;
+  border-radius: 5px;
   padding: 1rem;
   display: flex;
   gap: 1rem;
@@ -18,7 +20,8 @@ export const solutionCss = `.list1 {
 }
 
 .list3 {
-  border: 2px solid red;
+  border: 2px solid black;
+  border-radius: 5px;
   /* want padding same as gap */
   padding: 1rem;
   display: flex;
@@ -41,7 +44,7 @@ export const solutionCss = `.list1 {
   padding: 20px;
   display: flex;
   gap: 15px;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .buttonContainer button {
@@ -61,4 +64,5 @@ export const solutionCss = `.list1 {
   min-width: 200px;
   background-color: aquamarine;
   border: 1px solid black;
-}`;
+}
+`;
