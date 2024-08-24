@@ -19,6 +19,7 @@ const linkContent: linkProps[] = [
     title: "Reference",
     items: [
       { label: "React Docs", to: "https://react.dev/reference/react" },
+      { label: "MDN Docs", to: "https://developer.mozilla.org/en-US/" },
     ],
   },
   {
