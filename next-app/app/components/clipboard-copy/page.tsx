@@ -7,6 +7,7 @@ import { solutionCode } from "./solutionCode";
 import { solutionCss } from "./solutionCss";
 import { Metadata } from "next";
 import titleToKebabCase from "../../utils/kebab-case";
+import LinksList from "../../_components/linkslist/LinksList";
 
 export const metadata: Metadata = {
   title: `${info.title}`,
@@ -48,10 +49,17 @@ const Component = () => {
           <Explanation />
         </div>
         <h2 className={styles.Component__heading}>Code</h2>
-
         <CodeStyling code={solutionCode} language="typescript" />
         <h2 className={styles.Component__heading}>Styling</h2>
         <CodeStyling code={solutionCss} language="css" />
+        {info?.links && info?.links.length > 0 && (
+          <>
+            <h2 className={styles.Component__heading}>Links</h2>
+            <div className={styles.Component__LinksContainer}>
+              <LinksList links={info?.links} />
+            </div>
+          </>
+        )}
       </div>
     </main>
   );

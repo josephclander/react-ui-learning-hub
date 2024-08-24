@@ -1,0 +1,10 @@
+.list_item {
+  margin-bottom: 15px;
+}
+
+.list_item a {
+  transition: color 0.3s;
+}
+.list_item a:hover {
+  color: #7b8cde;
+}

@@ -24,7 +24,8 @@
 .Component__HeadingContainer,
 .Component__SolutionContainer,
 .Component__ExplanationContainer,
-.Component__CodeContainer {
+.Component__CodeContainer,
+.Component__LinksContainer {
   padding: 10px;
   border: 3px solid black;
   border-radius: var(--border-radius);
@@ -51,7 +52,8 @@
 }
 
 .Component__HeadingContainer,
-.Component__ExplanationContainer {
+.Component__ExplanationContainer,
+.Component__LinksContainer {
   background-color: white;
 }
 
