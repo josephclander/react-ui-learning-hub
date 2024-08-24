@@ -6,6 +6,7 @@
   gap: 1rem;
   width: 550px;
   overflow-x: scroll;
+  background-color: white;
 }
 
 .list2 {
@@ -17,26 +18,27 @@
   width: 556px; 
   overflow-x: hidden;
   scroll-behavior: smooth;
+  background-color: white;
 }
 
 .list3 {
   border: 2px solid black;
   border-radius: 5px;
   /* want padding same as gap */
-  padding: 1rem;
+  padding: 16px;
+  gap: 16px;
   display: flex;
-  gap: 1rem;
-  width: 204px;
+  width: 232px; /* 200px width plus 16px gap both sides */
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
+  background-color: white;
 }
 
 .list3 li {
-  scroll-snap-align: start;
+  scroll-snap-align: center;
   flex-shrink: 0;
   width: 200px; /* your item width */
-  margin-right: 16px; /* your gap */
 }
 
 .buttonContainer {
@@ -49,6 +51,7 @@
 
 .buttonContainer button {
   padding: 5px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
