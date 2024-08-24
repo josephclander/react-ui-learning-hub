@@ -36,6 +36,10 @@
   scale: 1.05;
 }
 
+.Home__Link a {
+  color: black;
+}
+
 /* w-full max-w-2xl mx-auto p-10 flex flex-col */
 .container {
   width: 100%;
@@ -64,10 +68,11 @@
   margin-bottom: 12px;
 }
 
-.element_link {
+.link {
+  color: var(--colour-secondary);
   transition: color 0.3s;
 }
 
-.element_link:hover {
-  color: #7b8ade;
+.link:hover {
+  color: var(--colour-primary);
 }

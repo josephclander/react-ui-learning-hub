@@ -1,12 +1,15 @@
 import Link from "next/link";
-import styles from "./page.module.css";
+import styles from "./NotFound.module.css";
 
 const NotFound = () => {
   return (
-    <main className={styles.Root__container}>
+    <main className={styles.container}>
       <h2>This page doesn&apos;t exist.</h2>
       <p>
-        Return to the <Link href="/">home page</Link>
+        Return to the{" "}
+        <Link className={styles.link} href="/">
+          home page
+        </Link>
       </p>
     </main>
   );

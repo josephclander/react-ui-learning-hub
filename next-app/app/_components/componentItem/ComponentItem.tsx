@@ -60,7 +60,7 @@ const ComponentItem = (component: ComponentProps) => {
   );
 
   return component.complete ? (
-    <Link href={`/components/${component.slug}`}>{content}</Link>
+    <Link className={styles.link} href={`/components/${component.slug}`}>{content}</Link>
   ) : (
     content
   );

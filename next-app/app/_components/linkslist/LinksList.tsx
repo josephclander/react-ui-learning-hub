@@ -16,7 +16,7 @@ const LinksList: React.FC<LinksProps> = ({ links }) => {
       {links &&
         links.map((link) => (
           <li className={styles.list_item} key={link.name}>
-            <a href={link.url}>{link.name}</a>
+            <a className={styles.link} href={link.url}>{link.name}</a>
           </li>
         ))}
     </ul>

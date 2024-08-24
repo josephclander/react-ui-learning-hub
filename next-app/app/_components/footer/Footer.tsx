@@ -38,7 +38,9 @@ const Footer = () => {
       <div className={styles.siteLogo}>
         <Logo width="150px" />
         <h2 className={styles.Home__Link}>
-          <Link href="/">React UI Learning Hub</Link>
+          <Link href="/">
+            React UI Learning Hub
+          </Link>
         </h2>
       </div>
       <div className={styles.name}>
@@ -64,7 +66,7 @@ const Footer = () => {
                       return (
                         <a
                           target="_blank"
-                          className={styles.element_link}
+                          className={styles.link}
                           key={link.label}
                           href={link.to}
                         >

@@ -2,9 +2,11 @@
   margin-bottom: 15px;
 }
 
-.list_item a {
+.link {
+  color: var(--colour-secondary);
   transition: color 0.3s;
 }
-.list_item a:hover {
-  color: #7b8cde;
+
+.link:hover {
+  color: var(--colour-primary);
 }
