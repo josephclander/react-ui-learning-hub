@@ -6,13 +6,7 @@ const Explanation = () => {
         To be able to write to the clipboard, you&apos;ll notice we use the
         line,{" "}
         <code className="code">navigator.clipboard.writeText(copyText)</code> in
-        the code. You can find more on that and further properties on{" "}
-        <a
-          style={{ textDecoration: "underline" }}
-          href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/clipboard"
-        >
-          MDN
-        </a>
+        the code.
       </p>
       <h3>How to copy the text</h3>
       <p>
