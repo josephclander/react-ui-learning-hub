@@ -136,7 +136,7 @@ export const componentsData = {
     details:
       "Build a form where users can dynamically add or remove input fields (like text boxes or dropdowns).",
     complete: true,
-    explanation: true,
+    explanation: false,
     video: false,
   },
   "image-zoom-viewer": {
