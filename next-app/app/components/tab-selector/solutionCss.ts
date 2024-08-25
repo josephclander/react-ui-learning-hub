@@ -23,6 +23,6 @@ export const solutionCss = `.list {
 }
 
 .content {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 `;
