@@ -226,7 +226,7 @@ export const componentsData = {
     details:
       "Develop a component that filters items in a list based on a text input search query.",
     complete: true,
-    explanation: false,
+    explanation: true,
     video: false,
   },
   "simple-blog-post-editor": {
