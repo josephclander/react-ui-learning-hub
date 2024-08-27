@@ -256,7 +256,7 @@ export const componentsData = {
     details:
       "Create a component with multiple tabs for users to click through. Display different content as each tab is selected.",
     complete: true,
-    explanation: false,
+    explanation: true,
     video: false,
   },
   "theme-switcher": {
@@ -266,7 +266,7 @@ export const componentsData = {
     details:
       "Build a toggle that switches the color scheme of the page between light and dark modes.",
     complete: true,
-    explanation: false,
+    explanation: true,
     video: false,
   },
   timer: {
@@ -296,7 +296,7 @@ export const componentsData = {
     details:
       "Implement tooltips that appear when hovering over different elements, providing additional information.",
     complete: true,
-    explanation: false,
+    explanation: true,
     video: false,
   },
   "weather-display-widget": {

@@ -1,6 +1,4 @@
-export const solutionCode = `"use client";
-
-import { useState } from "react";
+export const solutionCode = `import { useState } from "react";
 import styles from "./Solution.module.css";
 
 const Solution = () => {
