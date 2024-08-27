@@ -236,7 +236,7 @@ export const componentsData = {
     details:
       "Create a text input area where users can enter a title and content for a blog post, and submit it with a button.",
     complete: true,
-    explanation: false,
+    explanation: true,
     video: false,
   },
   "star-rating": {
