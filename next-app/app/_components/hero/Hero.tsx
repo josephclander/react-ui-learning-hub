@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <div className={styles.container}>
       <div className={styles.tagline}>
-        <h1 className="bold">Learn To Build React Components</h1>
+        <h1 className="bold">Learn how to build common React UI components</h1>
         <p>
           Explore a diverse library of <span className="bold">React</span>{" "}
           solutions, featuring step-by-step guides on implementing essential{" "}
