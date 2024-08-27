@@ -55,7 +55,7 @@ const Solution = () => {
 
   return (
     <>
-      <h2>Please enter your details for Insurance</h2>
+      <h2>Please enter your details</h2>
       <form onSubmit={handleSubmit} className={styles.form}>
         <div className={styles.container}>
           <h3 className={styles.h3}>Personal</h3>

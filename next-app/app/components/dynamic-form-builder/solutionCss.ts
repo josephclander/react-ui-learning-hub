@@ -1,5 +1,4 @@
 export const solutionCss = `.form {
-  min-height: 80vh;
   display: flex;
   flex-direction: column;
   gap: 10px;
