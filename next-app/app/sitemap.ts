@@ -20,7 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       return {
         url: `${URL}/components/${page.slug}`,
         lastModified: new Date(),
-        changeFrequency: "monthly" as ChangeFrequency,
+        changeFrequency: "weekly" as ChangeFrequency,
         priority: 0.5,
       };
     }
@@ -30,7 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: URL,
       lastModified: new Date(),
-      changeFrequency: "yearly" as ChangeFrequency,
+      changeFrequency: "weekly" as ChangeFrequency,
       priority: 1,
     },
     ...components,
