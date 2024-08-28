@@ -1,7 +1,6 @@
 // file: next-app/app/_components/hero/Hero.tsx
 import HeroLogo from "@/app/_assets/HeroLogo";
 import styles from "./Hero.module.css";
-import Logo from "@/app/_assets/Logo";
 
 const Hero = () => {
   return (
