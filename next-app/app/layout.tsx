@@ -12,7 +12,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    template: "%s Component - React UI Learning Hub",
+    template: "How to Build a React %s Component - React UI Learning Hub",
     default: "React UI Learning Hub - Learn HOW to build React components.",
   },
   alternates: {
