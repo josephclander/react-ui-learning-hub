@@ -1,0 +1,4 @@
+Sitemap: https://react-ui-learning-hub.vercel.app/sitemap.xml
+
+User-agent: *
+Allow: /
