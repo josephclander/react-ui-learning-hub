@@ -15,6 +15,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `/components/${titleToKebabCase(info.title)}`,
   },
+  openGraph: {
+    images: `./components/${titleToKebabCase(info.title)}/opengraph-image.png`,
+  },
 };
 
 const Component = () => {
