@@ -7,10 +7,10 @@
   justify-content: center;
   align-items: center;
   border-radius: 5px;
-  background-image: url("../../_assets/jigsaw_piece.svg"), linear-gradient(
+  background-image: url("../../_assets/jigsaw_tile2.png"), linear-gradient(
     127deg,
-    #7b8cde 0%,
-    #7b8cde 100%
+    #bfe6de 0%,
+    #bfe6de 100%
   );
   background-repeat: repeat;
   background-position: -100px -50px;
