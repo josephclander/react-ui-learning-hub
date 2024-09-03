@@ -36,6 +36,7 @@ select {
 }
 
 body {
+  position: relative;
   font-family: "Roboto", sans-serif;
   color: var(--font-color-primary);
   background-color: var(--white);

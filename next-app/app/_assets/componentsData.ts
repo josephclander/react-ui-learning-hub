@@ -1,3 +1,5 @@
+// file: ./app/_assets/componentsData.ts
+
 export type ComponentProps = {
   id: number;
   slug: string;
@@ -8,7 +10,7 @@ export type ComponentProps = {
   video: boolean;
 };
 
-export const componentsData = {
+export const componentsData: Record<string, ComponentProps> = {
   accordion: {
     id: 1,
     slug: "accordion",
