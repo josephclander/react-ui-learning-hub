@@ -217,8 +217,8 @@ export const componentsData: Record<string, ComponentProps> = {
     title: "Range Slider",
     details:
       "Develop a range slider component for selecting a value within a specified range.",
-    complete: false,
-    explanation: false,
+    complete: true,
+    explanation: true,
     video: false,
   },
   "search-filter-for-list": {
