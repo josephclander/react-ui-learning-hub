@@ -1,4 +1,10 @@
 Sitemap: https://react-ui-learning-hub.vercel.app/sitemap.xml
 
+User-agent: GPTBot
+Disallow: /
+
+User-agent: OAI-SearchBot
+Disallow: /
+
 User-agent: *
 Allow: /
